@@ -1,0 +1,345 @@
+{
+  "summary": {
+    "episodes": 32,
+    "disagreements": 16,
+    "identical_required": {
+      "episodes": 16,
+      "disagreements": 16
+    },
+    "no_identical_required": {
+      "episodes": 16,
+      "disagreements": 0
+    },
+    "observed_group_changes": 12,
+    "group_changes_without_identical_required": 4,
+    "representation_only_core_score_changes": 0,
+    "payload_multiset_agreement_with_instance": 32,
+    "authorization_multiset_agreement_with_instance": 32,
+    "scope": "Offline reanalysis and synthetic evaluator-input checks, not new model episodes or causal fault replays. Multiset agreement is local to these hard-bound approved effects."
+  },
+  "rows": [
+    {
+      "run": "runs\\distinct_messages__authorization_receipt__r1",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\distinct_messages__authorization_receipt__r2",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\distinct_messages__content_receipt__r1",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\distinct_messages__content_receipt__r2",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\new_approval_same_content__authorization_receipt__r1",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\new_approval_same_content__authorization_receipt__r2",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\new_approval_same_content__content_receipt__r1",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": false,
+      "authorization_multiset_accept": false,
+      "instance_accept": false
+    },
+    {
+      "run": "runs\\new_approval_same_content__content_receipt__r2",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": false,
+      "authorization_multiset_accept": false,
+      "instance_accept": false
+    },
+    {
+      "run": "runs\\partial_distinct_recipients__authorization_receipt__r1",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\partial_distinct_recipients__authorization_receipt__r2",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\partial_distinct_recipients__content_receipt__r1",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\partial_distinct_recipients__content_receipt__r2",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\same_approval_two__authorization_receipt__r1",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\same_approval_two__authorization_receipt__r2",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\same_approval_two__content_receipt__r1",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": false,
+      "authorization_multiset_accept": false,
+      "instance_accept": false
+    },
+    {
+      "run": "runs\\same_approval_two__content_receipt__r2",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": false,
+      "authorization_multiset_accept": false,
+      "instance_accept": false
+    },
+    {
+      "run": "runs\\single_clean__authorization_receipt__r1",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\single_clean__authorization_receipt__r2",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\single_clean__content_receipt__r1",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\single_clean__content_receipt__r2",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\single_lost_ack__authorization_receipt__r1",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\single_lost_ack__authorization_receipt__r2",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\single_lost_ack__content_receipt__r1",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "runs\\single_lost_ack__content_receipt__r2",
+      "required_identical_multiplicity": false,
+      "disagreement": false,
+      "post_error_grouping_changed": false,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "followup_runs\\new_approval_same_content__authorization_receipt__r1",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "followup_runs\\new_approval_same_content__authorization_receipt__r2",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "followup_runs\\new_approval_same_content__content_receipt__r1",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": false,
+      "authorization_multiset_accept": false,
+      "instance_accept": false
+    },
+    {
+      "run": "followup_runs\\new_approval_same_content__content_receipt__r2",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": false,
+      "authorization_multiset_accept": false,
+      "instance_accept": false
+    },
+    {
+      "run": "followup_runs\\same_approval_two__authorization_receipt__r1",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "followup_runs\\same_approval_two__authorization_receipt__r2",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": true,
+      "authorization_multiset_accept": true,
+      "instance_accept": true
+    },
+    {
+      "run": "followup_runs\\same_approval_two__content_receipt__r1",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": false,
+      "authorization_multiset_accept": false,
+      "instance_accept": false
+    },
+    {
+      "run": "followup_runs\\same_approval_two__content_receipt__r2",
+      "required_identical_multiplicity": true,
+      "disagreement": true,
+      "post_error_grouping_changed": true,
+      "payload_multiset_accept": false,
+      "authorization_multiset_accept": false,
+      "instance_accept": false
+    }
+  ],
+  "input_sha256": {
+    "runs\\distinct_messages__authorization_receipt__r1\\state.json": "217ea57293334392aa5b88173a30b581dfcb45a4b050b70f358129e4939ff2c5",
+    "runs\\distinct_messages__authorization_receipt__r2\\state.json": "47f3227a37f9e347dffcef0ad7068f8fcf2b2fdcb69cbd7140f01b0528fcb7e5",
+    "runs\\distinct_messages__content_receipt__r1\\state.json": "b8a0efb5c60b7d6d89a6b47a3439fa84417e8bcd55d981eb625a8338265bb985",
+    "runs\\distinct_messages__content_receipt__r2\\state.json": "933df64aeac947b5ce0e23c2ba42b9785d3ffee67dc4b34826c3667ddf9f4004",
+    "runs\\new_approval_same_content__authorization_receipt__r1\\state.json": "16dc55ff4cdfdcc41b7404ddf5b3e48cf8f48cbfaacbe656957a39fce78bc86d",
+    "runs\\new_approval_same_content__authorization_receipt__r2\\state.json": "8155282db0885c8876865d7900b3d777b8a0c272978e66118ce22a784e73fa4d",
+    "runs\\new_approval_same_content__content_receipt__r1\\state.json": "e200063f24dacc0b61a9fcec0e369470057fe25a9fb99e7eccae862d6e661524",
+    "runs\\new_approval_same_content__content_receipt__r2\\state.json": "dd93683f7ddacbfc28f9827e3917c485df39dd34db7b7deeb2ca9898036f63c6",
+    "runs\\partial_distinct_recipients__authorization_receipt__r1\\state.json": "f25d985b411165f1c026da195ba3f37d23ed42a5c28541f6c360c0ad7b50d8ed",
+    "runs\\partial_distinct_recipients__authorization_receipt__r2\\state.json": "f716414d2ce76d52b9734be98135f993dae3639a31d14f3c1ed8e9b6418a392f",
+    "runs\\partial_distinct_recipients__content_receipt__r1\\state.json": "51f35f58b447317b97132a1bf23d5e738c313bfe2b5728b77ef37f64f62eb41b",
+    "runs\\partial_distinct_recipients__content_receipt__r2\\state.json": "edf1516bf8a6e2f7a710d3d7cae634f26da0cb016b1aebbe6a7ee822576e592d",
+    "runs\\same_approval_two__authorization_receipt__r1\\state.json": "1e9bf18777cb7c504a3245e0fd3e3d2f8db5bb96a853a6b27ab9bc54224d1f1c",
+    "runs\\same_approval_two__authorization_receipt__r2\\state.json": "1197c9a4f3802ca4bc8eded29a950a4909237a55e766560f3ec539bd27074d71",
+    "runs\\same_approval_two__content_receipt__r1\\state.json": "e7cd1ab2a951a5a40c45821e43ef085209052e949d6277dfcee4dadd8106f2fb",
+    "runs\\same_approval_two__content_receipt__r2\\state.json": "859042158d7250442b90a0f6e9a585b5b67989b8207a34ac1928dcd8383246be",
+    "runs\\single_clean__authorization_receipt__r1\\state.json": "f08bd063e4fb11d69566cbefc2f8079e359ccc8d55465b8fd89bab201bd53f55",
+    "runs\\single_clean__authorization_receipt__r2\\state.json": "0a730b23b6060b289bef6fa6c2b5521adf8fafd41cd562beddeb7229f174ac9a",
+    "runs\\single_clean__content_receipt__r1\\state.json": "9974eadd7a72f4b87fe84fc19ef8f5957496b395013c11e9703e61bf811d81f2",
+    "runs\\single_clean__content_receipt__r2\\state.json": "c7fbd21fa7c00940de85fc6ae71bcb34efab5d341aac55aec12b61ade6918997",
+    "runs\\single_lost_ack__authorization_receipt__r1\\state.json": "d63275e7762bf2d0433642993ce3864e5dda12f0f414c7edb7bc03076f0b66fe",
+    "runs\\single_lost_ack__authorization_receipt__r2\\state.json": "f5a93c496cb6cf89791832311c4211ab7dba460d5ce2dfec678337b3c347aee1",
+    "runs\\single_lost_ack__content_receipt__r1\\state.json": "3af35b07453a03fc882917a720bafff2982daa90ccfd27dac93f0a54c65c3857",
+    "runs\\single_lost_ack__content_receipt__r2\\state.json": "df5c98e11a9ad801abdeded5c2d53917c3298d03e2c1fff9a8bc7275748c44d4",
+    "followup_runs\\new_approval_same_content__authorization_receipt__r1\\state.json": "51f564998a521a2edad3b66b3deb06eb00d65e7a7a3417c29b9bcf1f2198115c",
+    "followup_runs\\new_approval_same_content__authorization_receipt__r2\\state.json": "02f6578ecb1e5481362e146080fb6b0237c1f4083fd8ab57172be182c780fe15",
+    "followup_runs\\new_approval_same_content__content_receipt__r1\\state.json": "3f0aaf468557ecee834521ee6013951b3353d06b920a4e8ff5c74adef8cc9e73",
+    "followup_runs\\new_approval_same_content__content_receipt__r2\\state.json": "c719cc7dd67e14cf2f705767c07249a9717bc3b51686537a952a2d433f556553",
+    "followup_runs\\same_approval_two__authorization_receipt__r1\\state.json": "637f47794c183ad41a4dff97eeb019bb93ead5681812b116d8dde6ac3bcecd10",
+    "followup_runs\\same_approval_two__authorization_receipt__r2\\state.json": "7442524731a0359de1a1d7b7413e53017bd9166496cef1d79e97ecd4fcb0dc8b",
+    "followup_runs\\same_approval_two__content_receipt__r1\\state.json": "4155cc098d46ec6d6bb1149f40274dadf7ae23ec77029bd3c63fbac9bef1bd55",
+    "followup_runs\\same_approval_two__content_receipt__r2\\state.json": "547b67fee96f2921fe3ece073fe680618fb8090d0abd7e7fd49b90274117574f"
+  },
+  "scorer_sha256": "471e9037711582013f50c82beb8c93eb8ddbed819b3c2db4c8733a3f72ac2bac"
+}

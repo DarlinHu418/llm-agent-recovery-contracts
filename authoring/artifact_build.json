@@ -1,0 +1,9 @@
+{
+  "output": "不同工具契约下LLM_Agent非幂等操作失败恢复的决策边界研究.docx",
+  "source_template_sha256": "46cdf0e06e0c5405ea3a42b345d463258f9fa8fd61a979b47f83a97875926085",
+  "chapters": 13,
+  "figures": 9,
+  "tables": 11,
+  "references": 38,
+  "source_document_unchanged": true
+}

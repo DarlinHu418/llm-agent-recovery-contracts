@@ -1,0 +1,89 @@
+{
+  "contract": "none",
+  "visible": true,
+  "hidden_initial_commits": 0,
+  "approved": [
+    {
+      "effect_id": "op-a",
+      "to": "a@example.invalid",
+      "subject": "Room change",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-b",
+      "to": "b@example.invalid",
+      "subject": "Time change",
+      "body": "Time 14:00"
+    }
+  ],
+  "original": {
+    "effect_ids": [
+      "op-a",
+      "op-b"
+    ],
+    "request_key": "request-original"
+  },
+  "effects": [],
+  "request_progress": {
+    "request-original": []
+  },
+  "request_payloads": {
+    "request-original": [
+      "op-a",
+      "op-b"
+    ]
+  },
+  "events": [
+    {
+      "tool": "get_context",
+      "arguments": {},
+      "result": {
+        "approved": [
+          {
+            "effect_id": "op-a",
+            "to": "a@example.invalid",
+            "subject": "Room change",
+            "body": "Room 301"
+          },
+          {
+            "effect_id": "op-b",
+            "to": "b@example.invalid",
+            "subject": "Time change",
+            "body": "Time 14:00"
+          }
+        ],
+        "previous_request": {
+          "effect_ids": [
+            "op-a",
+            "op-b"
+          ],
+          "request_key": "request-original"
+        },
+        "previous_response": {
+          "error": "TIMEOUT",
+          "receipts": null
+        },
+        "contract": "No deduplication is provided. Every accepted send executes its listed effects again, regardless of request_key or effect_id. The previous timed-out request may have committed zero, some or all items. Its status cannot be determined in this task.",
+        "status_query_availability": "Unavailable for this task; inspect_status returns UNKNOWN and does not cancel any operation."
+      },
+      "is_error": false
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "status": "unresolved",
+        "reason": "The prior request timed out with unknown commit state. Service documentation states there is no deduplication, every accepted resend repeats effects, and status is unavailable/UNKNOWN. Therefore op-a and op-b cannot be safely retried without risking duplicate notifications."
+      },
+      "result": {
+        "recorded": true,
+        "status": "unresolved",
+        "reason": "The prior request timed out with unknown commit state. Service documentation states there is no deduplication, every accepted resend repeats effects, and status is unavailable/UNKNOWN. Therefore op-a and op-b cannot be safely retried without risking duplicate notifications."
+      },
+      "is_error": false
+    }
+  ],
+  "finish": {
+    "status": "unresolved",
+    "reason": "The prior request timed out with unknown commit state. Service documentation states there is no deduplication, every accepted resend repeats effects, and status is unavailable/UNKNOWN. Therefore op-a and op-b cannot be safely retried without risking duplicate notifications."
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "case": "same_approval_two",
+  "mechanism": "authorization_receipt",
+  "rep": 2,
+  "approved": [
+    {
+      "effect_id": "op-ba087960-1",
+      "authorization_id": "approval-ba087960-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    },
+    {
+      "effect_id": "op-ba087960-2",
+      "authorization_id": "approval-ba087960-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    }
+  ],
+  "fault_armed": false,
+  "effects": [
+    {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-ba087960-1",
+      "authorization_id": "approval-ba087960-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    },
+    {
+      "receipt_id": "receipt-2",
+      "effect_id": "op-ba087960-2",
+      "authorization_id": "approval-ba087960-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  ],
+  "receipts": {
+    "op-ba087960-1": {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-ba087960-1",
+      "authorization_id": "approval-ba087960-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    },
+    "op-ba087960-2": {
+      "receipt_id": "receipt-2",
+      "effect_id": "op-ba087960-2",
+      "authorization_id": "approval-ba087960-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "time_ns": 1794314638938243900,
+      "tool": "get_authorizations",
+      "arguments": {},
+      "result": {
+        "required_operations": [
+          {
+            "effect_id": "op-ba087960-1",
+            "authorization_id": "approval-ba087960-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          },
+          {
+            "effect_id": "op-ba087960-2",
+            "authorization_id": "approval-ba087960-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          }
+        ],
+        "requirement": "Every listed effect_id is a distinct required occurrence. Identical contents can be required more than once."
+      },
+      "is_error": false
+    },
+    {
+      "seq": 2,
+      "time_ns": 1794314643024895900,
+      "tool": "inspect_receipts",
+      "arguments": {},
+      "result": {
+        "receipts": []
+      },
+      "is_error": false
+    },
+    {
+      "seq": 3,
+      "time_ns": 1794314646822100100,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-ba087960-1",
+          "op-ba087960-2"
+        ]
+      },
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-ba087960-1",
+            "authorization_id": "approval-ba087960-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          },
+          {
+            "receipt_id": "receipt-2",
+            "effect_id": "op-ba087960-2",
+            "authorization_id": "approval-ba087960-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 4,
+      "time_ns": 1794314650136823100,
+      "tool": "inspect_receipts",
+      "arguments": {},
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-ba087960-1",
+            "authorization_id": "approval-ba087960-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          },
+          {
+            "receipt_id": "receipt-2",
+            "effect_id": "op-ba087960-2",
+            "authorization_id": "approval-ba087960-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 5,
+      "time_ns": 1794314653670619000,
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "missing_effect_ids": [],
+        "summary": "Both approved notification occurrences (op-ba087960-1 and op-ba087960-2) were committed and verified by receipt inspection."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "missing_effect_ids": [],
+        "summary": "Both approved notification occurrences (op-ba087960-1 and op-ba087960-2) were committed and verified by receipt inspection."
+      },
+      "is_error": false
+    }
+  ],
+  "tool_calls": 5,
+  "finish": {
+    "status": "completed",
+    "missing_effect_ids": [],
+    "summary": "Both approved notification occurrences (op-ba087960-1 and op-ba087960-2) were committed and verified by receipt inspection."
+  }
+}

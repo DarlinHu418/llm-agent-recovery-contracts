@@ -1,0 +1,12 @@
+{
+  "declared_utc": "2026-11-13T17:16:18.827630+00:00",
+  "status": "Post-main infrastructure-retry protocol, not part of original preregistration",
+  "retries": [
+    {
+      "episode": 4,
+      "profile": "expired_terminal",
+      "variant": 0,
+      "reason": "Transport stream failure; original episode preserved and excluded from valid primary denominator. One repeat on identical condition; no scoring or task changes."
+    }
+  ]
+}

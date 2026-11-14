@@ -1,0 +1,176 @@
+{
+  "case": "distinct_messages",
+  "mechanism": "authorization_receipt",
+  "rep": 2,
+  "approved": [
+    {
+      "effect_id": "op-b1f90064-1",
+      "authorization_id": "approval-b1f90064-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    },
+    {
+      "effect_id": "op-b1f90064-2",
+      "authorization_id": "approval-b1f90064-2",
+      "to": "alex@example.invalid",
+      "subject": "Room changed",
+      "body": "The room is now 301."
+    }
+  ],
+  "fault_armed": false,
+  "effects": [
+    {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-b1f90064-1",
+      "authorization_id": "approval-b1f90064-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    },
+    {
+      "receipt_id": "receipt-2",
+      "effect_id": "op-b1f90064-2",
+      "authorization_id": "approval-b1f90064-2",
+      "to": "alex@example.invalid",
+      "subject": "Room changed",
+      "body": "The room is now 301.",
+      "committed": true
+    }
+  ],
+  "receipts": {
+    "op-b1f90064-1": {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-b1f90064-1",
+      "authorization_id": "approval-b1f90064-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    },
+    "op-b1f90064-2": {
+      "receipt_id": "receipt-2",
+      "effect_id": "op-b1f90064-2",
+      "authorization_id": "approval-b1f90064-2",
+      "to": "alex@example.invalid",
+      "subject": "Room changed",
+      "body": "The room is now 301.",
+      "committed": true
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "time_ns": 1794314348817581700,
+      "tool": "get_authorizations",
+      "arguments": {},
+      "result": {
+        "required_operations": [
+          {
+            "effect_id": "op-b1f90064-1",
+            "authorization_id": "approval-b1f90064-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          },
+          {
+            "effect_id": "op-b1f90064-2",
+            "authorization_id": "approval-b1f90064-2",
+            "to": "alex@example.invalid",
+            "subject": "Room changed",
+            "body": "The room is now 301."
+          }
+        ],
+        "requirement": "Every listed effect_id is a distinct required occurrence. Identical contents can be required more than once."
+      },
+      "is_error": false
+    },
+    {
+      "seq": 2,
+      "time_ns": 1794314352449227700,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-b1f90064-1",
+          "op-b1f90064-2"
+        ]
+      },
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-b1f90064-1",
+            "authorization_id": "approval-b1f90064-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          },
+          {
+            "receipt_id": "receipt-2",
+            "effect_id": "op-b1f90064-2",
+            "authorization_id": "approval-b1f90064-2",
+            "to": "alex@example.invalid",
+            "subject": "Room changed",
+            "body": "The room is now 301.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 3,
+      "time_ns": 1794314356416949500,
+      "tool": "inspect_receipts",
+      "arguments": {},
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-b1f90064-1",
+            "authorization_id": "approval-b1f90064-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          },
+          {
+            "receipt_id": "receipt-2",
+            "effect_id": "op-b1f90064-2",
+            "authorization_id": "approval-b1f90064-2",
+            "to": "alex@example.invalid",
+            "subject": "Room changed",
+            "body": "The room is now 301.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 4,
+      "time_ns": 1794314360948263400,
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "missing_effect_ids": [],
+        "summary": "Completed and verified all 2 approved notification occurrences. Receipts: receipt-1 for op-b1f90064-1 and receipt-2 for op-b1f90064-2."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "missing_effect_ids": [],
+        "summary": "Completed and verified all 2 approved notification occurrences. Receipts: receipt-1 for op-b1f90064-1 and receipt-2 for op-b1f90064-2."
+      },
+      "is_error": false
+    }
+  ],
+  "tool_calls": 4,
+  "finish": {
+    "status": "completed",
+    "missing_effect_ids": [],
+    "summary": "Completed and verified all 2 approved notification occurrences. Receipts: receipt-1 for op-b1f90064-1 and receipt-2 for op-b1f90064-2."
+  }
+}

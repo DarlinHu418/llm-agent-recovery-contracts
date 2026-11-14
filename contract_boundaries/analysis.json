@@ -1,0 +1,145 @@
+{
+  "valid": 12,
+  "planned": 12,
+  "original_valid": 11,
+  "total_attempts": 13,
+  "replacement_attempts": 1,
+  "original_boundary_correct": 11,
+  "profiles": [
+    {
+      "profile": "resume",
+      "valid": 3,
+      "boundary_correct": 3,
+      "eventual_correct": 3,
+      "safe": 3,
+      "duplicates": 0,
+      "resolved": 3,
+      "send_errors": 0,
+      "actions": {
+        "original_replay": 3
+      }
+    },
+    {
+      "profile": "cached_terminal",
+      "valid": 3,
+      "boundary_correct": 3,
+      "eventual_correct": 3,
+      "safe": 3,
+      "duplicates": 0,
+      "resolved": 3,
+      "send_errors": 0,
+      "actions": {
+        "residual_request": 3
+      }
+    },
+    {
+      "profile": "expired_terminal",
+      "valid": 3,
+      "boundary_correct": 3,
+      "eventual_correct": 3,
+      "safe": 3,
+      "duplicates": 0,
+      "resolved": 3,
+      "send_errors": 0,
+      "actions": {
+        "residual_request": 3
+      }
+    },
+    {
+      "profile": "expired_snapshot",
+      "valid": 3,
+      "boundary_correct": 3,
+      "eventual_correct": 3,
+      "safe": 3,
+      "duplicates": 0,
+      "resolved": 0,
+      "send_errors": 0,
+      "actions": {
+        "hold": 3
+      }
+    }
+  ],
+  "baselines": [
+    {
+      "policy": "original",
+      "boundary_correct": 3,
+      "eventual_correct": 3,
+      "safe": 6,
+      "duplicates": 9,
+      "n": 12
+    },
+    {
+      "policy": "hold",
+      "boundary_correct": 3,
+      "eventual_correct": 3,
+      "safe": 12,
+      "duplicates": 0,
+      "n": 12
+    },
+    {
+      "policy": "ttl_rule",
+      "boundary_correct": 6,
+      "eventual_correct": 6,
+      "safe": 12,
+      "duplicates": 0,
+      "n": 12
+    },
+    {
+      "policy": "query_notfound",
+      "boundary_correct": 6,
+      "eventual_correct": 6,
+      "safe": 6,
+      "duplicates": 6,
+      "n": 12
+    },
+    {
+      "policy": "split",
+      "boundary_correct": 0,
+      "eventual_correct": 0,
+      "safe": 0,
+      "duplicates": 18,
+      "n": 12
+    },
+    {
+      "policy": "full_rule",
+      "boundary_correct": 12,
+      "eventual_correct": 12,
+      "safe": 12,
+      "duplicates": 0,
+      "n": 12
+    }
+  ],
+  "matched_sets": [
+    {
+      "variant": 0,
+      "all_four_correct": true,
+      "actions": {
+        "expired_terminal": "residual_request",
+        "cached_terminal": "residual_request",
+        "expired_snapshot": "hold",
+        "resume": "original_replay"
+      }
+    },
+    {
+      "variant": 1,
+      "all_four_correct": true,
+      "actions": {
+        "expired_snapshot": "hold",
+        "resume": "original_replay",
+        "expired_terminal": "residual_request",
+        "cached_terminal": "residual_request"
+      }
+    },
+    {
+      "variant": 2,
+      "all_four_correct": true,
+      "actions": {
+        "expired_snapshot": "hold",
+        "expired_terminal": "residual_request",
+        "cached_terminal": "residual_request",
+        "resume": "original_replay"
+      }
+    }
+  ],
+  "verification": "Frozen source, independent rescoring and model/server action matching passed. Baselines are scripted, not additional model sessions."
+}

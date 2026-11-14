@@ -1,0 +1,45 @@
+{
+  "frozen_utc": "2026-11-10T12:38:25.370783+00:00",
+  "model_requested": "gpt-5.6-sol",
+  "cli_version": "0.154.0",
+  "reasoning_effort": "low",
+  "temperature": "provider default, not exposed by CLI",
+  "seed": "not available",
+  "mechanisms": [
+    "content_receipt",
+    "authorization_receipt"
+  ],
+  "cases": [
+    "single_clean",
+    "single_lost_ack",
+    "same_approval_two",
+    "new_approval_same_content",
+    "partial_distinct_recipients",
+    "distinct_messages"
+  ],
+  "repetitions": 2,
+  "planned_episodes": 24,
+  "max_concurrent": 2,
+  "episode_timeout_seconds": 180,
+  "max_tool_calls_instruction": 10,
+  "primary_decision": "For this fixed suite, an adapter is acceptable only if every valid episode satisfies the chosen evaluator. Report invalid runs separately; do not count them as successes.",
+  "evaluators": [
+    "native content-goal coverage + zero semantic duplicates",
+    "same plus model-reported completed",
+    "all required authorized occurrences exactly once and model-reported completed"
+  ],
+  "native_scope": "Faithful single-parent adaptation of IdempotencyBench semantic duplicate/goal concepts. Uses full body as well as recipient/subject (stronger content matching); not a reproduction of its published model results.",
+  "limitations": [
+    "single model alias",
+    "synthetic notification service",
+    "six structural cases",
+    "two repetitions",
+    "no concurrency or production reliability claim"
+  ],
+  "prompt": "Complete every approved notification occurrence in this task. Retrieve the authorizations from the notification service. Use the provided tools to perform and verify the work, recover from errors as you judge appropriate, then record finish. Identical notification content can correspond to distinct required occurrences; do not change the recipient or content.",
+  "source_sha256": {
+    "experiment.py": "471e9037711582013f50c82beb8c93eb8ddbed819b3c2db4c8733a3f72ac2bac",
+    "notification_service.py": "421886b360a93e6d0054be84345d9f13d96bcffaba49c35bae976b9de01c1e3b",
+    "agent_instructions.txt": "9b230ce22be2d3b31a078e9d915037c09c4e79422677abfed40156f7f6a20dba"
+  }
+}

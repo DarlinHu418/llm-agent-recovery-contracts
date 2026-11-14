@@ -1,0 +1,127 @@
+{
+  "groups": [
+    {
+      "contract": "item",
+      "visible": true,
+      "planned": 3,
+      "valid": 3,
+      "policy_correct": 3,
+      "information_justified_safe": 3,
+      "duplicate_effects": 0,
+      "ungrounded_complete": 0,
+      "send_errors": 0,
+      "completed_with_evidence": 3,
+      "strategies": {
+        "original_replay": 3
+      }
+    },
+    {
+      "contract": "batch",
+      "visible": true,
+      "planned": 3,
+      "valid": 3,
+      "policy_correct": 3,
+      "information_justified_safe": 3,
+      "duplicate_effects": 0,
+      "ungrounded_complete": 0,
+      "send_errors": 0,
+      "completed_with_evidence": 3,
+      "strategies": {
+        "original_replay": 3
+      }
+    },
+    {
+      "contract": "none",
+      "visible": true,
+      "planned": 3,
+      "valid": 3,
+      "policy_correct": 3,
+      "information_justified_safe": 3,
+      "duplicate_effects": 0,
+      "ungrounded_complete": 0,
+      "send_errors": 0,
+      "completed_with_evidence": 0,
+      "strategies": {
+        "hold": 3
+      }
+    },
+    {
+      "contract": "item",
+      "visible": false,
+      "planned": 3,
+      "valid": 3,
+      "policy_correct": 3,
+      "information_justified_safe": 3,
+      "duplicate_effects": 0,
+      "ungrounded_complete": 0,
+      "send_errors": 0,
+      "completed_with_evidence": 0,
+      "strategies": {
+        "hold": 3
+      }
+    },
+    {
+      "contract": "batch",
+      "visible": false,
+      "planned": 3,
+      "valid": 3,
+      "policy_correct": 3,
+      "information_justified_safe": 3,
+      "duplicate_effects": 0,
+      "ungrounded_complete": 0,
+      "send_errors": 0,
+      "completed_with_evidence": 0,
+      "strategies": {
+        "hold": 3
+      }
+    },
+    {
+      "contract": "none",
+      "visible": false,
+      "planned": 3,
+      "valid": 3,
+      "policy_correct": 3,
+      "information_justified_safe": 3,
+      "duplicate_effects": 0,
+      "ungrounded_complete": 0,
+      "send_errors": 0,
+      "completed_with_evidence": 0,
+      "strategies": {
+        "hold": 3
+      }
+    }
+  ],
+  "baselines": [
+    {
+      "policy": "hold",
+      "correct": 12,
+      "safe": 18,
+      "duplicates": 0,
+      "episodes": 18
+    },
+    {
+      "policy": "replay",
+      "correct": 6,
+      "safe": 6,
+      "duplicates": 6,
+      "episodes": 18
+    },
+    {
+      "policy": "split_fresh",
+      "correct": 3,
+      "safe": 3,
+      "duplicates": 12,
+      "episodes": 18
+    },
+    {
+      "policy": "contract_rule",
+      "correct": 18,
+      "safe": 18,
+      "duplicates": 0,
+      "episodes": 18
+    }
+  ],
+  "valid": 18,
+  "planned": 18,
+  "scope": "Single-model recovery-handoff pilot; one stochastic session per hidden world; no statistical or autonomous repartitioning causality claim."
+}

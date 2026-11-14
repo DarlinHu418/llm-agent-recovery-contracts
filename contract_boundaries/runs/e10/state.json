@@ -1,0 +1,146 @@
+{
+  "profile": "expired_terminal",
+  "variant": 1,
+  "rep": 0,
+  "approved": [
+    {
+      "effect_id": "op-c26d89e-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-c26d89e-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "original": {
+    "effect_ids": [
+      "op-c26d89e-x",
+      "op-c26d89e-y"
+    ],
+    "request_key": "req-c26d89e"
+  },
+  "request_age_minutes": 90,
+  "effects": [
+    {
+      "effect_id": "op-c26d89e-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-c26d89e-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "terminal": true,
+  "late_pending": false,
+  "request_cache": {
+    "recovery-req-c26d89e-y": {
+      "ids": [
+        "op-c26d89e-y"
+      ],
+      "response": {
+        "receipts": [
+          {
+            "effect_id": "op-c26d89e-y",
+            "committed": true
+          }
+        ]
+      }
+    }
+  },
+  "events": [
+    {
+      "tool": "get_context",
+      "arguments": {},
+      "result": {
+        "approved": [
+          {
+            "effect_id": "op-c26d89e-x",
+            "to": "a@example.invalid",
+            "subject": "Room",
+            "body": "Room 301"
+          },
+          {
+            "effect_id": "op-c26d89e-y",
+            "to": "b@example.invalid",
+            "subject": "Time",
+            "body": "Time 14:00"
+          }
+        ],
+        "previous_request": {
+          "effect_ids": [
+            "op-c26d89e-x",
+            "op-c26d89e-y"
+          ],
+          "request_key": "req-c26d89e"
+        },
+        "previous_response": {
+          "error": "TIMEOUT",
+          "receipts": null
+        },
+        "request_age_minutes": 90,
+        "service_documentation": "inspect_status reads a final authoritative execution ledger: the original worker is permanently fenced. An item reported NOT_FOUND there has not executed and cannot later execute under the old request.\nNew requests succeed immediately. Notification payloads come from the immutable approved list. There is no cancellation or other lookup tool in this task.\nRequest keys bind the ordered item list. While retained, the same key with changed parameters is rejected. A fresh key is an independent request; effect IDs are references, not deduplication tokens.\nReusing a retained key returns the saved first response only; it performs no additional work. That response can contain a receipt for only part of the original list.\nKeys were removed at request age 60 minutes. Requests using a removed key are new requests."
+      },
+      "is_error": false
+    },
+    {
+      "tool": "inspect_status",
+      "arguments": {},
+      "result": {
+        "items": [
+          {
+            "effect_id": "op-c26d89e-x",
+            "status": "COMMITTED"
+          },
+          {
+            "effect_id": "op-c26d89e-y",
+            "status": "NOT_FOUND"
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "send",
+      "arguments": {
+        "effect_ids": [
+          "op-c26d89e-y"
+        ],
+        "request_key": "recovery-req-c26d89e-y"
+      },
+      "result": {
+        "receipts": [
+          {
+            "effect_id": "op-c26d89e-y",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "reason": "Authoritative ledger showed op-c26d89e-x COMMITTED and op-c26d89e-y NOT_FOUND with the original worker permanently fenced. Submitted only op-c26d89e-y once under fresh request key recovery-req-c26d89e-y; receipt confirmed committed=true. Both approved effects are therefore completed exactly once."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "reason": "Authoritative ledger showed op-c26d89e-x COMMITTED and op-c26d89e-y NOT_FOUND with the original worker permanently fenced. Submitted only op-c26d89e-y once under fresh request key recovery-req-c26d89e-y; receipt confirmed committed=true. Both approved effects are therefore completed exactly once."
+      },
+      "is_error": false
+    }
+  ],
+  "finish": {
+    "status": "completed",
+    "reason": "Authoritative ledger showed op-c26d89e-x COMMITTED and op-c26d89e-y NOT_FOUND with the original worker permanently fenced. Submitted only op-c26d89e-y once under fresh request key recovery-req-c26d89e-y; receipt confirmed committed=true. Both approved effects are therefore completed exactly once."
+  }
+}

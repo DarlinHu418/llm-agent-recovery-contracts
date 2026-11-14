@@ -1,0 +1,130 @@
+{
+  "contract": "item",
+  "visible": true,
+  "hidden_initial_commits": 2,
+  "approved": [
+    {
+      "effect_id": "op-a",
+      "to": "a@example.invalid",
+      "subject": "Room change",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-b",
+      "to": "b@example.invalid",
+      "subject": "Time change",
+      "body": "Time 14:00"
+    }
+  ],
+  "original": {
+    "effect_ids": [
+      "op-a",
+      "op-b"
+    ],
+    "request_key": "request-original"
+  },
+  "effects": [
+    {
+      "effect_id": "op-a",
+      "to": "a@example.invalid",
+      "subject": "Room change",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-b",
+      "to": "b@example.invalid",
+      "subject": "Time change",
+      "body": "Time 14:00"
+    }
+  ],
+  "request_progress": {
+    "request-original": [
+      "op-a",
+      "op-b"
+    ]
+  },
+  "request_payloads": {
+    "request-original": [
+      "op-a",
+      "op-b"
+    ]
+  },
+  "events": [
+    {
+      "tool": "get_context",
+      "arguments": {},
+      "result": {
+        "approved": [
+          {
+            "effect_id": "op-a",
+            "to": "a@example.invalid",
+            "subject": "Room change",
+            "body": "Room 301"
+          },
+          {
+            "effect_id": "op-b",
+            "to": "b@example.invalid",
+            "subject": "Time change",
+            "body": "Time 14:00"
+          }
+        ],
+        "previous_request": {
+          "effect_ids": [
+            "op-a",
+            "op-b"
+          ],
+          "request_key": "request-original"
+        },
+        "previous_response": {
+          "error": "TIMEOUT",
+          "receipts": null
+        },
+        "contract": "Deduplication unit: approved effect_id, across all calls and request keys. Each approved effect can commit at most once. Regrouping does not change this identity. Same ID always refers to immutable approved content. Retrying returns committed receipts. Records do not expire during this task.",
+        "status_query_availability": "Unavailable for this task; inspect_status returns UNKNOWN and does not cancel any operation."
+      },
+      "is_error": false
+    },
+    {
+      "tool": "send",
+      "arguments": {
+        "effect_ids": [
+          "op-a",
+          "op-b"
+        ],
+        "request_key": "request-original"
+      },
+      "result": {
+        "receipts": [
+          {
+            "effect_id": "op-a",
+            "committed": true,
+            "replayed": true
+          },
+          {
+            "effect_id": "op-b",
+            "committed": true,
+            "replayed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "reason": "Recovered the original timed-out request with the original request key. Receipts confirm both approved effects op-a and op-b are committed; both were replayed, so no duplicate external effects were created."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "reason": "Recovered the original timed-out request with the original request key. Receipts confirm both approved effects op-a and op-b are committed; both were replayed, so no duplicate external effects were created."
+      },
+      "is_error": false
+    }
+  ],
+  "finish": {
+    "status": "completed",
+    "reason": "Recovered the original timed-out request with the original request key. Receipts confirm both approved effects op-a and op-b are committed; both were replayed, so no duplicate external effects were created."
+  }
+}

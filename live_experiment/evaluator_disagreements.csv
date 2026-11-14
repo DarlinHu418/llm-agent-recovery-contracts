@@ -1,0 +1,17 @@
+﻿phase,case,mechanism,rep,native_accept,native_claim_aware_accept,authorized_resolved_exact,agent_claim,authorized_missing,native_duplicates
+runs,new_approval_same_content,authorization_receipt,1,False,False,True,completed,0,1
+runs,new_approval_same_content,authorization_receipt,2,False,False,True,completed,0,1
+runs,new_approval_same_content,content_receipt,1,True,False,False,partial,1,0
+runs,new_approval_same_content,content_receipt,2,True,False,False,partial,1,0
+runs,same_approval_two,authorization_receipt,1,False,False,True,completed,0,1
+runs,same_approval_two,authorization_receipt,2,False,False,True,completed,0,1
+runs,same_approval_two,content_receipt,1,True,False,False,partial,1,0
+runs,same_approval_two,content_receipt,2,True,False,False,partial,1,0
+followup_runs,new_approval_same_content,authorization_receipt,1,False,False,True,completed,0,1
+followup_runs,new_approval_same_content,authorization_receipt,2,False,False,True,completed,0,1
+followup_runs,new_approval_same_content,content_receipt,1,True,False,False,partial,1,0
+followup_runs,new_approval_same_content,content_receipt,2,True,False,False,partial,1,0
+followup_runs,same_approval_two,authorization_receipt,1,False,False,True,completed,0,1
+followup_runs,same_approval_two,authorization_receipt,2,False,False,True,completed,0,1
+followup_runs,same_approval_two,content_receipt,1,True,False,False,partial,1,0
+followup_runs,same_approval_two,content_receipt,2,True,False,False,partial,1,0

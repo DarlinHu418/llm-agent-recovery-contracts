@@ -1,0 +1,5 @@
+# Preserve frozen source and evidence bytes on every checkout.
+* -text
+*.docx binary
+*.png binary
+*.pdf binary

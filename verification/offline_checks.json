@@ -1,0 +1,80 @@
+{
+  "verified_at_utc": "2026-11-14T09:23:02.767218+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "offline_only": true,
+  "all_passed": true,
+  "checks": [
+    {
+      "directory": "live_experiment",
+      "command": [
+        "python",
+        "test_experiment.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"meaningful_checks\": 14, \"status\": \"passed\"}\n",
+      "stderr": ""
+    },
+    {
+      "directory": "live_experiment",
+      "command": [
+        "python",
+        "analyze.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"main\": {\n    \"content_receipt\": {\n      \"planned\": 12,\n      \"valid\": 12,\n      \"native_accept\": 12,\n      \"native_claim_aware_accept\": 8,\n      \"authorized_exact\": 8,\n      \"authorized_resolved_exact\": 8,\n      \"false_complete\": 0,\n      \"post_error_grouping_changed\": 2,\n      \"authorized_missing\": 4,\n      \"authorized_excess\": 0,\n      \"binding_errors\": 0,\n      \"mean_tool_calls\": 5.416666666666667,\n      \"median_seconds\": 41.09350000007544,\n      \"input_tokens\": 877144,\n      \"cached_input_tokens\": 790528,\n      \"output_tokens\": 6245,\n      \"adopt_under_native\": true,\n      \"adopt_under_native_claim_aware\": false,\n      \"adopt_under_corrected\": false\n    },\n    \"authorization_receipt\": {\n      \"planned\": 12,\n      \"valid\": 12,\n      \"native_accept\": 8,\n      \"native_claim_aware_accept\": 8,\n      \"authorized_exact\": 12,\n      \"authorized_resolved_exact\": 12,\n      \"false_complete\": 0,\n      \"post_error_grouping_changed\": 2,\n      \"authorized_missing\": 0,\n      \"authorized_excess\": 0,\n      \"binding_errors\": 0,\n      \"mean_tool_calls\": 4.5,\n      \"median_seconds\": 32.249999999883585,\n      \"input_tokens\": 758797,\n      \"cached_input_tokens\": 654336,\n      \"output_tokens\": 4727,\n      \"adopt_under_native\": false,\n      \"adopt_under_native_claim_aware\": false,\n      \"adopt_under_corrected\": true\n    }\n  },\n  \"followup\": {\n    \"content_receipt\": {\n      \"planned\": 4,\n      \"valid\": 4,\n      \"native_accept\": 4,\n      \"native_claim_aware_accept\": 0,\n      \"authorized_exact\": 0,\n      \"authorized_resolved_exact\": 0,\n      \"false_complete\": 0,\n      \"post_error_grouping_changed\": 4,\n      \"authorized_missing\": 4,\n      \"authorized_excess\": 0,\n      \"binding_errors\": 0,\n      \"mean_tool_calls\": 7.25,\n      \"median_seconds\": 50.6875,\n      \"input_tokens\": 374003,\n      \"cached_input_tokens\": 343808,\n      \"output_tokens\": 3197,\n      \"adopt_under_native\": true,\n      \"adopt_under_native_claim_aware\": false,\n      \"adopt_under_corrected\": false\n    },\n    \"authorization_receipt\": {\n      \"planned\": 4,\n      \"valid\": 4,\n      \"native_accept\": 0,\n      \"native_claim_aware_accept\": 0,\n      \"authorized_exact\": 4,\n      \"authorized_resolved_exact\": 4,\n      \"false_complete\": 0,\n      \"post_error_grouping_changed\": 4,\n      \"authorized_missing\": 0,\n      \"authorized_excess\": 0,\n      \"binding_errors\": 0,\n      \"mean_tool_calls\": 6.25,\n      \"median_seconds\": 43.0625,\n      \"input_tokens\": 329623,\n      \"cached_input_tokens\": 286592,\n      \"output_tokens\": 2076,\n      \"adopt_under_native\": false,\n      \"adopt_under_native_claim_aware\": false,\n      \"adopt_under_corrected\": true\n    }\n  },\n  \"verification\": \"Frozen source hashes, independent rescoring, model completion, MCP-only actions and raw effect bindings passed.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "directory": "live_experiment",
+      "command": [
+        "python",
+        "audit_measurement.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"episodes\": 32,\n  \"disagreements\": 16,\n  \"identical_required\": {\n    \"episodes\": 16,\n    \"disagreements\": 16\n  },\n  \"no_identical_required\": {\n    \"episodes\": 16,\n    \"disagreements\": 0\n  },\n  \"observed_group_changes\": 12,\n  \"group_changes_without_identical_required\": 4,\n  \"representation_only_core_score_changes\": 0,\n  \"payload_multiset_agreement_with_instance\": 32,\n  \"authorization_multiset_agreement_with_instance\": 32,\n  \"scope\": \"Offline reanalysis and synthetic evaluator-input checks, not new model episodes or causal fault replays. Multiset agreement is local to these hard-bound approved effects.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "directory": "contract_recovery",
+      "command": [
+        "python",
+        "run.py",
+        "check"
+      ],
+      "returncode": 0,
+      "stdout": "Checks passed: 9 world/contract pairs replayed twice; mismatch rejected; hidden worlds observationally equal\n",
+      "stderr": ""
+    },
+    {
+      "directory": "contract_recovery",
+      "command": [
+        "python",
+        "analyze.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"groups\": [\n    {\n      \"contract\": \"item\",\n      \"visible\": true,\n      \"planned\": 3,\n      \"valid\": 3,\n      \"policy_correct\": 3,\n      \"information_justified_safe\": 3,\n      \"duplicate_effects\": 0,\n      \"ungrounded_complete\": 0,\n      \"send_errors\": 0,\n      \"completed_with_evidence\": 3,\n      \"strategies\": {\n        \"original_replay\": 3\n      }\n    },\n    {\n      \"contract\": \"batch\",\n      \"visible\": true,\n      \"planned\": 3,\n      \"valid\": 3,\n      \"policy_correct\": 3,\n      \"information_justified_safe\": 3,\n      \"duplicate_effects\": 0,\n      \"ungrounded_complete\": 0,\n      \"send_errors\": 0,\n      \"completed_with_evidence\": 3,\n      \"strategies\": {\n        \"original_replay\": 3\n      }\n    },\n    {\n      \"contract\": \"none\",\n      \"visible\": true,\n      \"planned\": 3,\n      \"valid\": 3,\n      \"policy_correct\": 3,\n      \"information_justified_safe\": 3,\n      \"duplicate_effects\": 0,\n      \"ungrounded_complete\": 0,\n      \"send_errors\": 0,\n      \"completed_with_evidence\": 0,\n      \"strategies\": {\n        \"hold\": 3\n      }\n    },\n    {\n      \"contract\": \"item\",\n      \"visible\": false,\n      \"planned\": 3,\n      \"valid\": 3,\n      \"policy_correct\": 3,\n      \"information_justified_safe\": 3,\n      \"duplicate_effects\": 0,\n      \"ungrounded_complete\": 0,\n      \"send_errors\": 0,\n      \"completed_with_evidence\": 0,\n      \"strategies\": {\n        \"hold\": 3\n      }\n    },\n    {\n      \"contract\": \"batch\",\n      \"visible\": false,\n      \"planned\": 3,\n      \"valid\": 3,\n      \"policy_correct\": 3,\n      \"information_justified_safe\": 3,\n      \"duplicate_effects\": 0,\n      \"ungrounded_complete\": 0,\n      \"send_errors\": 0,\n      \"completed_with_evidence\": 0,\n      \"strategies\": {\n        \"hold\": 3\n      }\n    },\n    {\n      \"contract\": \"none\",\n      \"visible\": false,\n      \"planned\": 3,\n      \"valid\": 3,\n      \"policy_correct\": 3,\n      \"information_justified_safe\": 3,\n      \"duplicate_effects\": 0,\n      \"ungrounded_complete\": 0,\n      \"send_errors\": 0,\n      \"completed_with_evidence\": 0,\n      \"strategies\": {\n        \"hold\": 3\n      }\n    }\n  ],\n  \"baselines\": [\n    {\n      \"policy\": \"hold\",\n      \"correct\": 12,\n      \"safe\": 18,\n      \"duplicates\": 0,\n      \"episodes\": 18\n    },\n    {\n      \"policy\": \"replay\",\n      \"correct\": 6,\n      \"safe\": 6,\n      \"duplicates\": 6,\n      \"episodes\": 18\n    },\n    {\n      \"policy\": \"split_fresh\",\n      \"correct\": 3,\n      \"safe\": 3,\n      \"duplicates\": 12,\n      \"episodes\": 18\n    },\n    {\n      \"policy\": \"contract_rule\",\n      \"correct\": 18,\n      \"safe\": 18,\n      \"duplicates\": 0,\n      \"episodes\": 18\n    }\n  ],\n  \"valid\": 18,\n  \"planned\": 18,\n  \"scope\": \"Single-model recovery-handoff pilot; one stochastic session per hidden world; no statistical or autonomous repartitioning causality claim.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "directory": "contract_boundaries",
+      "command": [
+        "python",
+        "run.py",
+        "check"
+      ],
+      "returncode": 0,
+      "stdout": "Checks passed: distinct reference actions, identical lookup payloads, unsafe counterexamples and cache nonprogress\n",
+      "stderr": ""
+    },
+    {
+      "directory": "contract_boundaries",
+      "command": [
+        "python",
+        "analyze.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"valid\": 12,\n  \"planned\": 12,\n  \"original_valid\": 11,\n  \"total_attempts\": 13,\n  \"replacement_attempts\": 1,\n  \"original_boundary_correct\": 11,\n  \"profiles\": [\n    {\n      \"profile\": \"resume\",\n      \"valid\": 3,\n      \"boundary_correct\": 3,\n      \"eventual_correct\": 3,\n      \"safe\": 3,\n      \"duplicates\": 0,\n      \"resolved\": 3,\n      \"send_errors\": 0,\n      \"actions\": {\n        \"original_replay\": 3\n      }\n    },\n    {\n      \"profile\": \"cached_terminal\",\n      \"valid\": 3,\n      \"boundary_correct\": 3,\n      \"eventual_correct\": 3,\n      \"safe\": 3,\n      \"duplicates\": 0,\n      \"resolved\": 3,\n      \"send_errors\": 0,\n      \"actions\": {\n        \"residual_request\": 3\n      }\n    },\n    {\n      \"profile\": \"expired_terminal\",\n      \"valid\": 3,\n      \"boundary_correct\": 3,\n      \"eventual_correct\": 3,\n      \"safe\": 3,\n      \"duplicates\": 0,\n      \"resolved\": 3,\n      \"send_errors\": 0,\n      \"actions\": {\n        \"residual_request\": 3\n      }\n    },\n    {\n      \"profile\": \"expired_snapshot\",\n      \"valid\": 3,\n      \"boundary_correct\": 3,\n      \"eventual_correct\": 3,\n      \"safe\": 3,\n      \"duplicates\": 0,\n      \"resolved\": 0,\n      \"send_errors\": 0,\n      \"actions\": {\n        \"hold\": 3\n      }\n    }\n  ],\n  \"baselines\": [\n    {\n      \"policy\": \"original\",\n      \"boundary_correct\": 3,\n      \"eventual_correct\": 3,\n      \"safe\": 6,\n      \"duplicates\": 9,\n      \"n\": 12\n    },\n    {\n      \"policy\": \"hold\",\n      \"boundary_correct\": 3,\n      \"eventual_correct\": 3,\n      \"safe\": 12,\n      \"duplicates\": 0,\n      \"n\": 12\n    },\n    {\n      \"policy\": \"ttl_rule\",\n      \"boundary_correct\": 6,\n      \"eventual_correct\": 6,\n      \"safe\": 12,\n      \"duplicates\": 0,\n      \"n\": 12\n    },\n    {\n      \"policy\": \"query_notfound\",\n      \"boundary_correct\": 6,\n      \"eventual_correct\": 6,\n      \"safe\": 6,\n      \"duplicates\": 6,\n      \"n\": 12\n    },\n    {\n      \"policy\": \"split\",\n      \"boundary_correct\": 0,\n      \"eventual_correct\": 0,\n      \"safe\": 0,\n      \"duplicates\": 18,\n      \"n\": 12\n    },\n    {\n      \"policy\": \"full_rule\",\n      \"boundary_correct\": 12,\n      \"eventual_correct\": 12,\n      \"safe\": 12,\n      \"duplicates\": 0,\n      \"n\": 12\n    }\n  ],\n  \"matched_sets\": [\n    {\n      \"variant\": 0,\n      \"all_four_correct\": true,\n      \"actions\": {\n        \"expired_terminal\": \"residual_request\",\n        \"cached_terminal\": \"residual_request\",\n        \"expired_snapshot\": \"hold\",\n        \"resume\": \"original_replay\"\n      }\n    },\n    {\n      \"variant\": 1,\n      \"all_four_correct\": true,\n      \"actions\": {\n        \"expired_snapshot\": \"hold\",\n        \"resume\": \"original_replay\",\n        \"expired_terminal\": \"residual_request\",\n        \"cached_terminal\": \"residual_request\"\n      }\n    },\n    {\n      \"variant\": 2,\n      \"all_four_correct\": true,\n      \"actions\": {\n        \"expired_snapshot\": \"hold\",\n        \"expired_terminal\": \"residual_request\",\n        \"cached_terminal\": \"residual_request\",\n        \"resume\": \"original_replay\"\n      }\n    }\n  ],\n  \"verification\": \"Frozen source, independent rescoring and model/server action matching passed. Baselines are scripted, not additional model sessions.\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

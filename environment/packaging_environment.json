@@ -1,0 +1,17 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "win32",
+  "packages": {
+    "python-docx": "1.2.0",
+    "lxml": "6.1.1",
+    "pypdf": "6.21.4",
+    "pypdfium2": "5.13.0",
+    "Pillow": "13.0.0"
+  },
+  "experiments": "Python >=3.10 standard library; original online CLI 0.154.0, model alias gpt-5.6-sol, reasoning low",
+  "figure_packages": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.4"
+  },
+  "model_snapshot_and_seed": "not available"
+}

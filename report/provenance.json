@@ -1,0 +1,12 @@
+{
+  "final_report_source": "Author-supplied Desktop final report",
+  "final_report_sha256": "ddb0cbfaa5350a919c2e42110871b79d27fb833c6ee11e0847dd944a99b39a6b",
+  "final_report_bytes": 9987142,
+  "paragraphs": 174,
+  "tables": 10,
+  "prior_generated_report_sha256": "05b4ac27fd94dd0c9c24705a7f6042b0910b1a2693a8b11cea3b86c76c77d52d",
+  "authoring_status": "Prior pre-author-revision source; does not regenerate author final Word verbatim",
+  "experimental_runs_unchanged": true,
+  "public_figures": "Original research figure sources from prior report build",
+  "packaged_at_utc": "2026-11-14T08:46:59.341574+00:00"
+}

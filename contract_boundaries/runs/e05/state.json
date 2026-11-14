@@ -1,0 +1,146 @@
+{
+  "profile": "cached_terminal",
+  "variant": 0,
+  "rep": 0,
+  "approved": [
+    {
+      "effect_id": "op-0b75205-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-0b75205-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "original": {
+    "effect_ids": [
+      "op-0b75205-x",
+      "op-0b75205-y"
+    ],
+    "request_key": "req-0b75205"
+  },
+  "request_age_minutes": 20,
+  "effects": [
+    {
+      "effect_id": "op-0b75205-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-0b75205-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "terminal": true,
+  "late_pending": false,
+  "request_cache": {
+    "req-0b75205-recovery-y": {
+      "ids": [
+        "op-0b75205-y"
+      ],
+      "response": {
+        "receipts": [
+          {
+            "effect_id": "op-0b75205-y",
+            "committed": true
+          }
+        ]
+      }
+    }
+  },
+  "events": [
+    {
+      "tool": "get_context",
+      "arguments": {},
+      "result": {
+        "approved": [
+          {
+            "effect_id": "op-0b75205-x",
+            "to": "a@example.invalid",
+            "subject": "Room",
+            "body": "Room 301"
+          },
+          {
+            "effect_id": "op-0b75205-y",
+            "to": "b@example.invalid",
+            "subject": "Time",
+            "body": "Time 14:00"
+          }
+        ],
+        "previous_request": {
+          "effect_ids": [
+            "op-0b75205-x",
+            "op-0b75205-y"
+          ],
+          "request_key": "req-0b75205"
+        },
+        "previous_response": {
+          "error": "TIMEOUT",
+          "receipts": null
+        },
+        "request_age_minutes": 20,
+        "service_documentation": "Request keys bind the ordered item list. While retained, the same key with changed parameters is rejected. A fresh key is an independent request; effect IDs are references, not deduplication tokens.\nReusing a retained key returns the saved first response only; it performs no additional work. That response can contain a receipt for only part of the original list.\nKeys remain stored until request age 60 minutes.\ninspect_status reads a final authoritative execution ledger: the original worker is permanently fenced. An item reported NOT_FOUND there has not executed and cannot later execute under the old request.\nNew requests succeed immediately. Notification payloads come from the immutable approved list. There is no cancellation or other lookup tool in this task."
+      },
+      "is_error": false
+    },
+    {
+      "tool": "inspect_status",
+      "arguments": {},
+      "result": {
+        "items": [
+          {
+            "effect_id": "op-0b75205-x",
+            "status": "COMMITTED"
+          },
+          {
+            "effect_id": "op-0b75205-y",
+            "status": "NOT_FOUND"
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "send",
+      "arguments": {
+        "effect_ids": [
+          "op-0b75205-y"
+        ],
+        "request_key": "req-0b75205-recovery-y"
+      },
+      "result": {
+        "receipts": [
+          {
+            "effect_id": "op-0b75205-y",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "reason": "op-0b75205-x was already COMMITTED in the authoritative ledger; op-0b75205-y was authoritatively NOT_FOUND and was recovered once with fresh key req-0b75205-recovery-y, returning committed=true."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "reason": "op-0b75205-x was already COMMITTED in the authoritative ledger; op-0b75205-y was authoritatively NOT_FOUND and was recovered once with fresh key req-0b75205-recovery-y, returning committed=true."
+      },
+      "is_error": false
+    }
+  ],
+  "finish": {
+    "status": "completed",
+    "reason": "op-0b75205-x was already COMMITTED in the authoritative ledger; op-0b75205-y was authoritatively NOT_FOUND and was recovered once with fresh key req-0b75205-recovery-y, returning committed=true."
+  }
+}

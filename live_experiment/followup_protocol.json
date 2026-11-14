@@ -1,0 +1,22 @@
+{
+  "frozen_utc": "2026-11-10T12:47:33.271007+00:00",
+  "reason": "The initial study includes clean multiplicity controls. Test whether the decision discrepancy also occurs after an actual post-commit lost acknowledgement.",
+  "status": "exploratory extension, separate from the 24-episode main study",
+  "cases": [
+    "same_approval_two",
+    "new_approval_same_content"
+  ],
+  "mechanisms": [
+    "content_receipt",
+    "authorization_receipt"
+  ],
+  "repetitions": 2,
+  "planned_episodes": 8,
+  "changed_field": "fault_armed=True",
+  "source_sha256": {
+    "followup.py": "8c0bbb0de15ccde233df6a6a46d789ec070d972a5ad931ee5b1bd777cf2d47e5",
+    "experiment.py": "471e9037711582013f50c82beb8c93eb8ddbed819b3c2db4c8733a3f72ac2bac",
+    "notification_service.py": "421886b360a93e6d0054be84345d9f13d96bcffaba49c35bae976b9de01c1e3b",
+    "agent_instructions.txt": "9b230ce22be2d3b31a078e9d915037c09c4e79422677abfed40156f7f6a20dba"
+  }
+}

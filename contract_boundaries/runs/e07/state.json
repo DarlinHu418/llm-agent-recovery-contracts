@@ -1,0 +1,137 @@
+{
+  "profile": "resume",
+  "variant": 1,
+  "rep": 0,
+  "approved": [
+    {
+      "effect_id": "op-c26d89e-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-c26d89e-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "original": {
+    "effect_ids": [
+      "op-c26d89e-x",
+      "op-c26d89e-y"
+    ],
+    "request_key": "req-c26d89e"
+  },
+  "request_age_minutes": 20,
+  "effects": [
+    {
+      "effect_id": "op-c26d89e-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-c26d89e-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "terminal": false,
+  "late_pending": false,
+  "request_cache": {},
+  "events": [
+    {
+      "tool": "get_context",
+      "arguments": {},
+      "result": {
+        "approved": [
+          {
+            "effect_id": "op-c26d89e-x",
+            "to": "a@example.invalid",
+            "subject": "Room",
+            "body": "Room 301"
+          },
+          {
+            "effect_id": "op-c26d89e-y",
+            "to": "b@example.invalid",
+            "subject": "Time",
+            "body": "Time 14:00"
+          }
+        ],
+        "previous_request": {
+          "effect_ids": [
+            "op-c26d89e-x",
+            "op-c26d89e-y"
+          ],
+          "request_key": "req-c26d89e"
+        },
+        "previous_response": {
+          "error": "TIMEOUT",
+          "receipts": null
+        },
+        "request_age_minutes": 20,
+        "service_documentation": "inspect_status reads only a point-in-time execution index. NOT_FOUND does not exclude delayed execution by the original worker; inspecting does not fence, cancel or drain it.\nNew requests succeed immediately. Notification payloads come from the immutable approved list. There is no cancellation or other lookup tool in this task.\nRequest keys bind the ordered item list. While retained, the same key with changed parameters is rejected. A fresh key is an independent request; effect IDs are references, not deduplication tokens.\nReusing a retained key executes only unfinished original items and returns all receipts.\nKeys remain stored until request age 60 minutes."
+      },
+      "is_error": false
+    },
+    {
+      "tool": "inspect_status",
+      "arguments": {},
+      "result": {
+        "items": [
+          {
+            "effect_id": "op-c26d89e-x",
+            "status": "COMMITTED"
+          },
+          {
+            "effect_id": "op-c26d89e-y",
+            "status": "NOT_FOUND"
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "send",
+      "arguments": {
+        "effect_ids": [
+          "op-c26d89e-x",
+          "op-c26d89e-y"
+        ],
+        "request_key": "req-c26d89e"
+      },
+      "result": {
+        "receipts": [
+          {
+            "effect_id": "op-c26d89e-x",
+            "committed": true
+          },
+          {
+            "effect_id": "op-c26d89e-y",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "reason": "Reused retained original request key with the exact approved ordered effect list; service returned committed receipts for op-c26d89e-x and op-c26d89e-y, so all approved work is complete without a duplicate independent submission."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "reason": "Reused retained original request key with the exact approved ordered effect list; service returned committed receipts for op-c26d89e-x and op-c26d89e-y, so all approved work is complete without a duplicate independent submission."
+      },
+      "is_error": false
+    }
+  ],
+  "finish": {
+    "status": "completed",
+    "reason": "Reused retained original request key with the exact approved ordered effect list; service returned committed receipts for op-c26d89e-x and op-c26d89e-y, so all approved work is complete without a duplicate independent submission."
+  }
+}

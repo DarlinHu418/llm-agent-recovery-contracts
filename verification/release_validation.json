@@ -1,0 +1,14 @@
+{
+  "files_scanned": 554,
+  "credential_pattern_scan": "passed",
+  "internal_reasoning_absent_from_public_events": true,
+  "frozen_source_hashes": "passed",
+  "author_report_byte_identical": true,
+  "chat_message_counts": {
+    "user": 25,
+    "assistant": 89
+  },
+  "offline_checks": 7,
+  "valid_model_sessions": 62,
+  "formal_and_replacement_attempts": 63
+}

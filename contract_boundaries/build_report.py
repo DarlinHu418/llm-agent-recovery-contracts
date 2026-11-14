@@ -1,0 +1,92 @@
+from pathlib import Path
+from collections import Counter
+import json,hashlib
+from docx import Document
+from docx.shared import Pt,Cm,RGBColor
+from docx.oxml import OxmlElement
+from docx.oxml.ns import qn
+R=Path(__file__).parent
+LABEL={'item':'逐效果去重','batch':'原批次同键恢复','none':'无去重保证'}
+
+def main():
+    a=json.loads((R/'analysis.json').read_text(encoding='utf-8'));rows=json.loads((R/'results.json').read_text(encoding='utf-8'))
+    src=R.parent/'live_experiment'/'授权效果评价与Agent恢复方案选择_真实实验报告.docx';d=Document(src)
+    for el in list(d._element.body):
+        if el.tag!=qn('w:sectPr'):d._element.body.remove(el)
+    md=[]
+    def p(tx):d.add_paragraph(tx);md.append(tx+'\n')
+    def h(tx,new=False):
+        par=d.add_heading(tx,1);par.paragraph_format.page_break_before=new;md.append('## '+tx+'\n')
+    def table(headers,data,widths):
+        t=d.add_table(rows=1,cols=len(headers));t.style='Table Grid';t.autofit=False
+        for i,w in enumerate(widths):t.columns[i].width=Cm(w)
+        for n,values in enumerate([headers]+data):
+            cells=t.rows[0].cells if n==0 else t.add_row().cells
+            for i,tx in enumerate(values):
+                cells[i].width=Cm(widths[i]);par=cells[i].paragraphs[0];par.paragraph_format.first_line_indent=Pt(0);par.paragraph_format.line_spacing=1.05
+                par.paragraph_format.space_before=Pt(4);par.paragraph_format.space_after=Pt(4)
+                run=par.add_run(str(tx));run.font.size=Pt(10.5);run.font.name='Times New Roman';run.bold=n==0
+                run._element.get_or_add_rPr().rFonts.set(qn('w:eastAsia'),'宋体')
+                if n==0:
+                    shade=OxmlElement('w:shd');shade.set(qn('w:fill'),'E8EDF1');cells[i]._tc.get_or_add_tcPr().append(shade)
+                if n==0:par.paragraph_format.keep_with_next=True
+            pr=cells[0]._tc.getparent().get_or_add_trPr();pr.append(OxmlElement('w:cantSplit'))
+        t.rows[0]._tr.get_or_add_trPr().append(OxmlElement('w:tblHeader'))
+        blank=d.add_paragraph();blank.paragraph_format.line_spacing=Pt(2);blank.paragraph_format.space_after=Pt(5)
+        md.append('| '+' | '.join(headers)+' |\n|'+ '|'.join(['---']*len(headers))+'|\n'+''.join('| '+' | '.join(map(str,row))+' |\n' for row in data))
+    names={'resume':'有效键 续做','cached_terminal':'有效键 仅回放 终结查询','expired_terminal':'过期键 终结查询','expired_snapshot':'过期键 瞬时查询'}
+    actions={'original_replay':'原批次同键恢复','residual_request':'查询后仅补未执行项','hold':'保留未决','other':'其他'}
+    title='智能体对恢复契约边界的条件辨别'
+    d.add_paragraph(title,style='Title');md.append('# '+title+'\n')
+    p('动作分叉实验    2026年11月14日')
+    p(f"本实验使四类契约下的正确动作分叉为原样恢复、查询后补做或保留未决。正式计划12会话，初次有效{a['original_valid']}个；基础设施补跑后有效{a['valid']}个，总尝试{a['total_attempts']}次。任务与查询内容匹配，只改变相关保证范围。")
+    h('一 能区分恢复规则的任务设计')
+    table(['契约条件','正确恢复动作','原样重试的问题'],[
+      ['原键有效 重试续做','原列表原键恢复','可安全完成'],
+      ['原键有效 只回放旧响应 查询终结','查账后独立补做未执行项','仅返回旧部分回执，不推进剩余项'],
+      ['原键过期 查询终结','查账后独立补做未执行项','整批会再次执行已提交项'],
+      ['原键过期 查询瞬时状态','保留未决，不提交新请求','旧请求仍可能执行剩余项'],
+    ],[4.4,5.0,5.2])
+    p('两项通知内容互异，各只授权一次。初始均为第一项已提交、第二项尚未提交；模型只看到原批次、TIMEOUT、请求年龄和服务契约。查询在四类条件下都返回第一项COMMITTED、第二项NOT_FOUND。终结查询保证原执行器已被永久隔离，未找到项不会被原请求执行；瞬时查询不提供这一保证。初始真实账本未直接提供给模型。')
+    p('键有效期统一为60分钟；上下文提供20或90分钟的请求年龄。契约不显示类别名，不写“正确答案”。每类设置三种描述顺序与有限同义改写，操作引用按版本生成，匹配组共享引用。共4类×3版本=12个在线模型会话；gpt-5.6-sol，low reasoning，并发2，180秒上限。三版本是弱表面控制，不等同跨域或广泛改写泛化。')
+    p('服务端采用预定不利调度：旧执行器未隔离时，它在不受保护的新提交前完成剩余项，用以检查误读NOT_FOUND的风险。调度不代模型决策，也不用于估计生产重复概率。')
+    h('二 预先固定的评价与对照',True)
+    p('安全性、最终任务正确性与首次提交选择分别评分。主指标要求首次提交属于安全且无需额外提交的动作类，并最终获得完整完成证据；必要停止则报告unresolved。先重放缓存、再查询补做可以最终正确，但首次提交不够经济，单独计为边界选择未通过，不能叫作重复副作用。额外只读查询不影响主指标。')
+    table(['条件','有效会话','动作边界正确','最终正确','实际动作'],[
+      [names[g['profile']],f"{g['valid']}/3",f"{g['boundary_correct']}/{g['valid']}",f"{g['eventual_correct']}/{g['valid']}",'; '.join(actions[k]+' '+str(v) for k,v in g['actions'].items())] for g in a['profiles']],[4.1,2.1,2.6,2.3,3.5])
+    table(['脚本对照','边界正确','最终正确','安全','重复效果数'],[
+      [b['policy'],f"{b['boundary_correct']}/12",f"{b['eventual_correct']}/12",f"{b['safe']}/12",b['duplicates']] for b in a['baselines']],[4.6,2.5,2.5,2.5,2.5])
+    p('original代表有键就原样重试；hold一律停止；ttl_rule有效就原样重试、过期就停止；query_notfound见未找到就补发；split查询后全部拆开用新请求提交。以上均为脚本对照，不是额外LLM样本。full_rule依据完整契约真值执行参考策略，是上界和工程强基线，不是自动解析自然语言的系统。')
+    p('不强制唯一UUID字符串或固定只读轨迹。过期后原键已被移除，若契约明确把该字符串视为新请求，查询证明未执行后用它提交剩余项，也属于新逻辑请求；不因字符串相同而误罚。原请求仍受保护时则不能改列表复用同键。')
+    h('三 匹配对与实际工具轨迹',True)
+    p('关键匹配对是过期键下的终结查询与瞬时查询：键年龄、通知、原批次以及查询返回内容相同，契约对“旧执行器能否再写”的承诺不同。两个条件分别需要补做和停止，NOT_FOUND本身不能决定动作。')
+    table(['描述版本','四条件全部辨别正确'],[[x['variant']+1,'是' if x['all_four_correct'] else '否'] for x in a['matched_sets']],[6.5,8.1])
+    for profile in ['cached_terminal','expired_snapshot']:
+        candidate=next(r for r in rows if r['profile']==profile and r['variant']==0)
+        folder=R/'runs'/f"e{candidate['episode']:02d}"
+        alternate=R/'replacement_runs'/folder.name
+        if alternate.exists() and json.loads((alternate/'run.json').read_text())['valid']:folder=alternate
+        s=json.loads((folder/'state.json').read_text(encoding='utf-8'))
+        p('代表会话 '+folder.name+'  '+names[profile])
+        tr=[]
+        for i,e in enumerate(s['events']):
+            detail=json.dumps(e['arguments'],ensure_ascii=False) if e['tool']=='send' else e['arguments']['status'] if e['tool']=='finish' else 'COMMITTED / NOT_FOUND' if e['tool']=='inspect_status' else '读取任务与契约'
+            tr.append([i+1,e['tool'],detail])
+        table(['步骤','工具','公开动作或反馈'],tr,[1.4,3.7,9.5])
+    p('报告按实际工具参数和效果账本判断，不以模型内部推理文本或事后自述作为理解证据。正式模型未被强迫先查询，也没有获得预设动作菜单。')
+    p('复核：python run.py check；python analyze.py。protocol.json冻结正式源码；retry_protocol.json保存异常补跑说明。源码、每次尝试的公开工具日志、状态、元数据及离线对照随数据包提供。')
+    h('四 结论 适用范围与复核',True)
+    total=sum(g['boundary_correct'] for g in a['profiles']);switch=sum(x['all_four_correct'] for x in a['matched_sets'])
+    p(f"有效会话中动作边界正确{total}/{a['valid']}；匹配描述版本中四条件全部正确{switch}/3。该结果可以排除本实验所列的单一恢复规则解释，支持模型在这组明确契约中区分缓存回放与续做、键有效期与查询终结性的功能性辨别。它不能证明人类意义上的真正理解，也不能排除一个覆盖全部条件的更完整规则解释。")
+    p(f"初次正式运行有效{a['original_valid']}/12，其中边界正确{a['original_boundary_correct']}个。另有会话在完成工具动作后响应流断开，按预设有效性标准排除；原记录保留。随后先写补跑协议再对相同条件补跑一次，补跑{a['replacement_attempts']}次。主实验和补跑分开保存，未把异常改记成模型成功。")
+    p('这是一组动作类别发生分叉的诊断任务，不是新幂等算法，也没有证明拆批导致操作身份漂移。原调用是预构造的超时交接状态；实际恢复动作来自在线模型。两份内容互异，避免合法重复授权混杂。只用一个模型别名，每版本一会话，无采样种子和后端固定快照，不报告总体显著性。')
+    p('限制还包括：合同均真实且简短；未测试长文干扰、工具说明冲突、上下文压缩和真实供应商。不同条件并非完全正交因素设计。初始已提交项总是列表第一项，尚未检验位置变化；查询要求和完成证据可部分抑制直接猜剩余项，但不证明位置无关泛化。模型通过不能据此推断开放环境已经可靠。')
+    p('工程依据：Stripe文档区分API v1保存首次响应和API v2尽可能继续失败工作；DynamoDB文档规定幂等窗口及参数绑定，并提供明确未处理项的批次恢复。本实验组合这些契约维度，包含额外的终结账本与隔离保证，不声称复现某个产品。')
+    p('https://docs.stripe.com/api/idempotent_requests')
+    p('https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/transaction-apis.html')
+    p('https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_BatchWriteItem.html')
+    d.core_properties.title=title;d.core_properties.author='';d.save(R/'契约边界辨别_动作分叉实验.docx')
+    (R/'研究设计与实验结果.md').write_text('\n'.join(md),encoding='utf-8')
+    print('Report created')
+
+if __name__=='__main__':main()

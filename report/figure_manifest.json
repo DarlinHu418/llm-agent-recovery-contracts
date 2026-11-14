@@ -1,0 +1,47 @@
+[
+  {
+    "name": "01_question_evolution",
+    "kind": "schematic",
+    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+  },
+  {
+    "name": "02_three_stage_design",
+    "kind": "schematic",
+    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+  },
+  {
+    "name": "03_hidden_commit_states",
+    "kind": "schematic",
+    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+  },
+  {
+    "name": "04_safe_action_tree",
+    "kind": "schematic",
+    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+  },
+  {
+    "name": "05_evaluation_reversal",
+    "kind": "data",
+    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+  },
+  {
+    "name": "06_contract_visibility",
+    "kind": "data",
+    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+  },
+  {
+    "name": "07_action_divergence",
+    "kind": "data",
+    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+  },
+  {
+    "name": "08_agent_rule_comparison",
+    "kind": "data",
+    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+  },
+  {
+    "name": "09_decision_execution_boundary",
+    "kind": "schematic",
+    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+  }
+]

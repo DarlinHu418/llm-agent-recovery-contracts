@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="648pt" height="180pt" viewBox="0 0 648 180" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-14T10:28:55.379620</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 180 
+L 648 180 
+L 648 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 28.512 68.1084 
+L 96.9408 68.1084 
+Q 104.40576 68.1084 104.40576 66.5532 
+L 104.40576 57.2868 
+Q 104.40576 55.7316 96.9408 55.7316 
+L 28.512 55.7316 
+Q 21.04704 55.7316 21.04704 57.2868 
+L 21.04704 66.5532 
+Q 21.04704 68.1084 28.512 68.1084 
+z
+" clip-path="url(#pa39fb10b01)" style="fill: #7c8792; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 159.1488 68.1084 
+L 227.5776 68.1084 
+Q 235.04256 68.1084 235.04256 66.5532 
+L 235.04256 57.2868 
+Q 235.04256 55.7316 227.5776 55.7316 
+L 159.1488 55.7316 
+Q 151.68384 55.7316 151.68384 57.2868 
+L 151.68384 66.5532 
+Q 151.68384 68.1084 159.1488 68.1084 
+z
+" clip-path="url(#pa39fb10b01)" style="fill: #3274a1; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 289.7856 68.1084 
+L 358.2144 68.1084 
+Q 365.67936 68.1084 365.67936 66.5532 
+L 365.67936 57.2868 
+Q 365.67936 55.7316 358.2144 55.7316 
+L 289.7856 55.7316 
+Q 282.32064 55.7316 282.32064 57.2868 
+L 282.32064 66.5532 
+Q 282.32064 68.1084 289.7856 68.1084 
+z
+" clip-path="url(#pa39fb10b01)" style="fill: #228675; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 420.4224 68.1084 
+L 488.8512 68.1084 
+Q 496.31616 68.1084 496.31616 66.5532 
+L 496.31616 57.2868 
+Q 496.31616 55.7316 488.8512 55.7316 
+L 420.4224 55.7316 
+Q 412.95744 55.7316 412.95744 57.2868 
+L 412.95744 66.5532 
+Q 412.95744 68.1084 420.4224 68.1084 
+z
+" clip-path="url(#pa39fb10b01)" style="fill: #7963a5; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 551.0592 68.1084 
+L 619.488 68.1084 
+Q 626.95296 68.1084 626.95296 66.5532 
+L 626.95296 57.2868 
+Q 626.95296 55.7316 619.488 55.7316 
+L 551.0592 55.7316 
+Q 543.59424 55.7316 543.59424 57.2868 
+L 543.59424 66.5532 
+Q 543.59424 68.1084 551.0592 68.1084 
+z
+" clip-path="url(#pa39fb10b01)" style="fill: #d18b35; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 108.273333 61.92 
+Q 128.045148 61.92 145.804502 61.92 
+" style="fill: none; stroke: #a8b0b7; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 141.804502 59.92 
+L 145.804502 61.92 
+L 141.804502 63.92 
+z
+" style="fill: #a8b0b7; stroke: #a8b0b7; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 238.910133 61.92 
+Q 258.681948 61.92 276.441302 61.92 
+" style="fill: none; stroke: #a8b0b7; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 272.441302 59.92 
+L 276.441302 61.92 
+L 272.441302 63.92 
+z
+" style="fill: #a8b0b7; stroke: #a8b0b7; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 369.546933 61.92 
+Q 389.318748 61.92 407.078102 61.92 
+" style="fill: none; stroke: #a8b0b7; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 403.078102 59.92 
+L 407.078102 61.92 
+L 403.078102 63.92 
+z
+" style="fill: #a8b0b7; stroke: #a8b0b7; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 500.183733 61.92 
+Q 519.955548 61.92 537.714902 61.92 
+" style="fill: none; stroke: #a8b0b7; stroke-width: 1.8; stroke-linecap: round"/>
+    <path d="M 533.714902 59.92 
+L 537.714902 61.92 
+L 533.714902 63.92 
+z
+" style="fill: #a8b0b7; stroke: #a8b0b7; stroke-width: 1.8; stroke-linecap: round"/>
+   </g>
+  </g>
+  <g id="legend_1">
+   <g id="patch_11">
+    <path d="M 169 152.508203 
+L 181 152.508203 
+L 181 145.508203 
+L 169 145.508203 
+z
+" style="fill: #7c8792"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="189" y="152.508203" transform="rotate(-0 189 152.508203)">初始身份漂移假设</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 169 168.436133 
+L 181 168.436133 
+L 181 161.436133 
+L 169 161.436133 
+z
+" style="fill: #3274a1"/>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="189" y="168.436133" transform="rotate(-0 189 168.436133)">评价有效性校准</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 284 152.508203 
+L 296 152.508203 
+L 296 145.508203 
+L 284 145.508203 
+z
+" style="fill: #228675"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="304" y="152.508203" transform="rotate(-0 304 152.508203)">契约可见性决策</text>
+   </g>
+   <g id="patch_14">
+    <path d="M 284 168.46582 
+L 296 168.46582 
+L 296 161.46582 
+L 284 161.46582 
+z
+" style="fill: #7963a5"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="304" y="168.46582" transform="rotate(-0 304 168.46582)">细粒度动作分叉</text>
+   </g>
+   <g id="patch_15">
+    <path d="M 389 152.508203 
+L 401 152.508203 
+L 401 145.508203 
+L 389 145.508203 
+z
+" style="fill: #d18b35"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="409" y="152.508203" transform="rotate(-0 409 152.508203)">确定性执行保障</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa39fb10b01">
+   <rect x="12.96" y="3.6" width="622.08" height="129.6"/>
+  </clipPath>
+ </defs>
+</svg>

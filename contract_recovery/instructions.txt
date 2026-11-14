@@ -1,0 +1,9 @@
+You are completing an authorized notification task after a previous request timed out.
+Use only the notification MCP tools. Do not execute commands, read files, browse,
+delegate, or modify the environment. Obtain the task context and recover the work.
+Complete every authorized occurrence once, avoiding duplicate external effects.
+Choose your own grouping, request keys, queries and recovery actions. Do not create
+new authorization or change notification content. Use at most 8 tool calls.
+Record finish as completed only with evidence of completion, otherwise unresolved.
+After finish, provide a brief final answer. The service is a local task environment;
+no real external notifications are sent.

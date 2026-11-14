@@ -1,0 +1,786 @@
+[
+  {
+    "number": 1,
+    "id": "2609.29095",
+    "title": "Where Does Exactly-Once Live? Model, Harness, and Tool-Contract Effects on Duplicate Side Effects in LLM Agents",
+    "authors_read_version": [
+      "Li, Jiapeng"
+    ],
+    "first_posted": "2026-09-24",
+    "version": "2609.29095v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§3—6与Discussion；同键契约和失效病例",
+    "url": "https://arxiv.org/abs/2609.29095v1",
+    "fulltext_url": "https://arxiv.org/html/2609.29095",
+    "sha256": "855594ae4fe17c9d80c289d2aba06b9041414971cff01b3d7583d8b2ee241d55",
+    "live_title": "Where Does Exactly-Once Live? Model, Harness, and Tool-Contract Effects on Duplicate Side Effects in LLM Agents",
+    "live_authors": [
+      "Li, Jiapeng"
+    ],
+    "live_date": [
+      "2026/09/24"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "46dedd9129d0096343cd80effd2f5abbb1670da603b2b207ea4b63c9036a45cd",
+    "local_fulltext": "sources\\2609.29095_body.md",
+    "local_fulltext_sha256": "03b4eb18b6d9e12f1b0046e934361682a3d5114e2e77e7644e705a83fecb1253",
+    "report_number": 1
+  },
+  {
+    "number": 2,
+    "id": "2608.02645",
+    "title": "Verified Tool Calls Improve LLM Agent Reliability Under Non-Atomic Failures",
+    "authors_read_version": [
+      "Mansoor, Isham Kalappurackal",
+      "Phadke, Abhishek",
+      "Rana, Pratip"
+    ],
+    "first_posted": "2026-07-31",
+    "version": "2608.02645v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§4.3—4.7、§5—7；键构造和消融",
+    "url": "https://arxiv.org/abs/2608.02645v1",
+    "fulltext_url": "https://arxiv.org/html/2608.02645",
+    "sha256": "e1d07ef8322f40b1f3aa906f279cbe79f8bcb0e462416a81d400cd73a727091e",
+    "live_title": "Verified Tool Calls Improve LLM Agent Reliability Under Non-Atomic Failures",
+    "live_authors": [
+      "Mansoor, Isham Kalappurackal",
+      "Phadke, Abhishek",
+      "Rana, Pratip"
+    ],
+    "live_date": [
+      "2026/07/31"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "7c54078a9dc48fb31a12a128227cda4ea476def22b4a48f1fb6f1861b07b4e21",
+    "local_fulltext": "sources\\2608.02645_body.md",
+    "local_fulltext_sha256": "d0b7e0b9441afdeb60f0578f3a7e5c092d76433db2713ed33e87e8c6a38c39fa",
+    "report_number": 2
+  },
+  {
+    "number": 3,
+    "id": "2610.15884",
+    "title": "RetryBench: Separating Retry Permission from Recovery Outcomes in GPT Tool Use",
+    "authors_read_version": [
+      "Liu, You",
+      "Liu, Yue",
+      "Lu, Quanchao"
+    ],
+    "first_posted": "2026-10-11",
+    "version": "2610.15884v4",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§2—6、附录A—D；v4契约与统计单位",
+    "url": "https://arxiv.org/abs/2610.15884v4",
+    "fulltext_url": "https://arxiv.org/html/2610.15884",
+    "sha256": "e96b7f1400cc143302f614df3eb157ecd39cfb1b6c58d280a3b294ec4ae43d79",
+    "live_title": "RetryBench: Separating Retry Permission from Recovery Outcomes in GPT Tool Use",
+    "live_authors": [
+      "Liu, You",
+      "Liu, Yue",
+      "Lu, Quanchao"
+    ],
+    "live_date": [
+      "2026/10/11"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "5c0c21d4c5a8b2df5e3b6f2917318abc21c73cf5745cfa770f08ee3a501a51d5",
+    "local_fulltext": "sources\\2610.15884_body.md",
+    "local_fulltext_sha256": "daccdc3ba1c581cc6c50d391f53383763063c7e4eb49172f4821bbb232eeff24",
+    "report_number": 3
+  },
+  {
+    "number": 4,
+    "id": "2608.26225",
+    "title": "Agent Mesh: Reliability Primitives for Non-Idempotent Agent Delegation - Identity Adequacy and Evidence Adequacy",
+    "authors_read_version": [
+      "Shaikh, Mazhar",
+      "Bombarde, Anurag Rajkumar",
+      "Pathak, Harshal"
+    ],
+    "first_posted": "2026-08-26",
+    "version": "2608.26225v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "F3、§V、P2/P3、§VIII与有效性威胁",
+    "url": "https://arxiv.org/abs/2608.26225v1",
+    "fulltext_url": "https://arxiv.org/html/2608.26225",
+    "sha256": "3fa1657872ccb17b5ec927127edbd4ac10fd64745e6a42c84801a83fa42b9d59",
+    "live_title": "Agent Mesh: Reliability Primitives for Non-Idempotent Agent Delegation - Identity Adequacy and Evidence Adequacy",
+    "live_authors": [
+      "Shaikh, Mazhar",
+      "Bombarde, Anurag Rajkumar",
+      "Pathak, Harshal"
+    ],
+    "live_date": [
+      "2026/08/26"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "07bbe3fee50e6faf3dca7232d1363aeb3e068da0f33a3299850096ceffa26082",
+    "local_fulltext": "sources\\2608.26225_body.md",
+    "local_fulltext_sha256": "3fb8b1cb0a9a15c472276795d2d2f30f7d80631d957a88d6e89399f8a506619d",
+    "report_number": 4
+  },
+  {
+    "number": 5,
+    "id": "2610.14810",
+    "title": "KedgeFlow: A Programmable Control Plane for Enterprise AI Agents",
+    "authors_read_version": [
+      "He, Jun",
+      "Yu, Deying"
+    ],
+    "first_posted": "2026-10-10",
+    "version": "2610.14810v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§3.2、§4.4、§5—6；身份层级和崩溃窗口",
+    "url": "https://arxiv.org/abs/2610.14810v1",
+    "fulltext_url": "https://arxiv.org/html/2610.14810",
+    "sha256": "fc4cc9e3918628ceaed693d433a30f276584f559402226a10b73b071b1514b5c",
+    "live_title": "KedgeFlow: A Programmable Control Plane for Enterprise AI Agents",
+    "live_authors": [
+      "He, Jun",
+      "Yu, Deying"
+    ],
+    "live_date": [
+      "2026/10/10"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "2404fa2c590e63d8ce576f87f5b92d67827b7797a8b5beb630803bd39aacffa1",
+    "local_fulltext": "sources\\2610.14810_body.md",
+    "local_fulltext_sha256": "f1dd73da0c8c186216f2f997f82cb92fb8e9eef99fe639b60e3339d5cd725086",
+    "report_number": 5
+  },
+  {
+    "number": 6,
+    "id": "2609.15397",
+    "title": "When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary",
+    "authors_read_version": [
+      "Trofimov, Artem",
+      "Novikov, Boris"
+    ],
+    "first_posted": "2026-09-14",
+    "version": "2609.15397v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§2—5；效果异常、接口边界与覆盖声明",
+    "url": "https://arxiv.org/abs/2609.15397v1",
+    "fulltext_url": "https://arxiv.org/html/2609.15397",
+    "sha256": "2203fafa6e61c01d92b4563632ef67ea5aa258caeb15c6fc87f5096969354d11",
+    "live_title": "When Tool Calls Succeed but Workflows Fail: Anomalies at the Agent-Tool Boundary",
+    "live_authors": [
+      "Trofimov, Artem",
+      "Novikov, Boris"
+    ],
+    "live_date": [
+      "2026/09/14"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "fe4ec50eb1fc515523984a2e52b5fa109428d528e74bd2dc0b06ebb754669784",
+    "local_fulltext": "sources\\2609.15397_body.md",
+    "local_fulltext_sha256": "c3bb8d82cea12cb15ddb32c5f4ff0c99e94e68db4ea9767800cf55d07dfbff82",
+    "report_number": 6
+  },
+  {
+    "number": 7,
+    "id": "2503.11951",
+    "title": "SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning",
+    "authors_read_version": [
+      "Chang, Edward Y.",
+      "Geng, Longling"
+    ],
+    "first_posted": "2025-03-15",
+    "version": "2503.11951v3",
+    "status": "已核实正式发表；正文分析对应所读版本",
+    "reading_scope": "§3、§4.3—4.5、§5；正式书目核验",
+    "url": "https://arxiv.org/abs/2503.11951v3",
+    "fulltext_url": "https://arxiv.org/html/2503.11951",
+    "sha256": "01753cf398c2bc6dad0c7207d732d5f76721ef249a0e63a8ff3c11c2a8fae989",
+    "live_title": "SagaLLM: Context Management, Validation, and Transaction Guarantees for Multi-Agent LLM Planning",
+    "live_authors": [
+      "Chang, Edward Y.",
+      "Geng, Longling"
+    ],
+    "live_date": [
+      "2025/03/15"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "cc4fe17f5732a155157eecc03281fdca94d0ce4d4986d5b1866afbc25ec8d32d",
+    "local_fulltext": "sources\\2503.11951_body.md",
+    "local_fulltext_sha256": "a2caab777e18398ed21a9b4fc0b2554d9ccd9e68c29d73e89789925c0e996be5",
+    "report_number": 7
+  },
+  {
+    "number": 8,
+    "id": "2606.17573",
+    "title": "Cordon: Semantic Transactions for Tool-Using LLM Agents",
+    "authors_read_version": [
+      "Chen, Zheng",
+      "Liu, Hanqing",
+      "Xu, Duling",
+      "Dong, Dong",
+      "Li, Jialin",
+      "Pu, Bangzheng",
+      "Zhai, Jidong"
+    ],
+    "first_posted": "2026-06-16",
+    "version": "2606.17573v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§3.2—3.4、§4.6、§6.5",
+    "url": "https://arxiv.org/abs/2606.17573v1",
+    "fulltext_url": "https://arxiv.org/html/2606.17573",
+    "sha256": "04c0d5f90df855f0277e6052572af4250034afc006c3c43e422dee4453a9f0e6",
+    "live_title": "Cordon: Semantic Transactions for Tool-Using LLM Agents",
+    "live_authors": [
+      "Chen, Zheng",
+      "Liu, Hanqing",
+      "Xu, Duling",
+      "Dong, Dong",
+      "Li, Jialin",
+      "Pu, Bangzheng",
+      "Zhai, Jidong"
+    ],
+    "live_date": [
+      "2026/06/16"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "e2cd772c063a8059b26cf3940b2215c9c0f541a51ca8d1c779d5f2ec4f04c333",
+    "local_fulltext": "sources\\2606.17573_body.md",
+    "local_fulltext_sha256": "6761d8394ff6229b918a5c71e91fe3a526e663e65a35ce201f30d21371f1ea0c",
+    "report_number": 8
+  },
+  {
+    "number": 9,
+    "id": "2605.23311",
+    "title": "DART: Semantic Recoverability for Structured Tool Agents",
+    "authors_read_version": [
+      "Yang, Ke",
+      "Li, Panpan",
+      "Wu, Zonghan",
+      "Xu, Kejin",
+      "Huang, Huaxi",
+      "Huang, Xiaoshui"
+    ],
+    "first_posted": "2026-05-22",
+    "version": "2605.23311v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§3—6、附录F/G；审阅边界与阻塞",
+    "url": "https://arxiv.org/abs/2605.23311v1",
+    "fulltext_url": "https://arxiv.org/html/2605.23311",
+    "sha256": "5001bcf7e86d5a8db3091d586bcc9bc8529c3d7ae1a1117866ed1992fc22e45b",
+    "live_title": "DART: Semantic Recoverability for Structured Tool Agents",
+    "live_authors": [
+      "Yang, Ke",
+      "Li, Panpan",
+      "Wu, Zonghan",
+      "Xu, Kejin",
+      "Huang, Huaxi",
+      "Huang, Xiaoshui"
+    ],
+    "live_date": [
+      "2026/05/22"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "849094078b96f741c42cbea9a5552c7d72b22345401d080511dbc2478b333082",
+    "local_fulltext": "sources\\2605.23311_body.md",
+    "local_fulltext_sha256": "671159610e8a73968efb5127d5aef7003c63619187e9404fc8c779c553741345",
+    "report_number": 9
+  },
+  {
+    "number": 10,
+    "id": "2608.14380",
+    "title": "AgentRewind: Recoverable Execution for Long-Horizon LLM Agents",
+    "authors_read_version": [
+      "Zhuang, Yu",
+      "Chen, Kefei",
+      "Duan, Yitong",
+      "Zheng, Shuxin",
+      "Li, Jian",
+      "Zhang, Xu-Yao"
+    ],
+    "first_posted": "2026-08-14",
+    "version": "2608.14380v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "Framework与External Boundary；附录C",
+    "url": "https://arxiv.org/abs/2608.14380v1",
+    "fulltext_url": "https://arxiv.org/html/2608.14380",
+    "sha256": "2e92b8c7f4b9fb0035cc6ef600a5324e3a4e8ccf40450cd1c67fb7aa94de53ff",
+    "live_title": "AgentRewind: Recoverable Execution for Long-Horizon LLM Agents",
+    "live_authors": [
+      "Zhuang, Yu",
+      "Chen, Kefei",
+      "Duan, Yitong",
+      "Zheng, Shuxin",
+      "Li, Jian",
+      "Zhang, Xu-Yao"
+    ],
+    "live_date": [
+      "2026/08/14"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "4f7b58fc334295c0e15c9eab6649a6ac6a6e49c7b7095b78e60dfb5a25e80fb9",
+    "local_fulltext": "sources\\2608.14380_body.md",
+    "local_fulltext_sha256": "92b5ca7db71c890b55cd20603db36369896ab374f50260c141157c565442cc42",
+    "report_number": 10
+  },
+  {
+    "number": 11,
+    "id": "2503.18666",
+    "title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+    "authors_read_version": [
+      "Wang, Haoyu",
+      "Poskitt, Christopher M.",
+      "Sun, Jun"
+    ],
+    "first_posted": "2025-03-24",
+    "version": "2503.18666v3",
+    "status": "已核实正式发表；正文分析对应所读版本",
+    "reading_scope": "§3、§5、§6.3；正式DOI交叉核验",
+    "url": "https://arxiv.org/abs/2503.18666v3",
+    "fulltext_url": "https://arxiv.org/html/2503.18666",
+    "sha256": "a8bd5fbce254380cb40eef426f1d437d4601ee5bf57734225c1bb82d24a2e5f0",
+    "live_title": "AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents",
+    "live_authors": [
+      "Wang, Haoyu",
+      "Poskitt, Christopher M.",
+      "Sun, Jun"
+    ],
+    "live_date": [
+      "2025/03/24"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "ca5571b39e04d1aa8a3a5987d60305e707ec2022f5071792e60f8783aa59b1f6",
+    "local_fulltext": "sources\\2503.18666_body.md",
+    "local_fulltext_sha256": "ce8e10c61fe39b18e9088d1f11d5428a4f7cde787f287655470075b187560156",
+    "report_number": 11
+  },
+  {
+    "number": 12,
+    "id": "2604.23283",
+    "title": "Revisable by Design: A Theory of Streaming LLM Agent Execution",
+    "authors_read_version": [
+      "Zhai, Zhiyuan",
+      "Li, Ming",
+      "Wang, Xin"
+    ],
+    "first_posted": "2026-04-25",
+    "version": "2604.23283v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§3—8、附录B；可逆性及假设",
+    "url": "https://arxiv.org/abs/2604.23283v1",
+    "fulltext_url": "https://arxiv.org/html/2604.23283",
+    "sha256": "0be578ca70388f3c0327339bd0984a9bb3e9493935c01e503369440effa753b2",
+    "live_title": "Revisable by Design: A Theory of Streaming LLM Agent Execution",
+    "live_authors": [
+      "Zhai, Zhiyuan",
+      "Li, Ming",
+      "Wang, Xin"
+    ],
+    "live_date": [
+      "2026/04/25"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "ddc1bc1391baa0a69d9ab093fca6536d820d716b867922d3a4c40a41a8824dcd",
+    "local_fulltext": "sources\\2604.23283_body.md",
+    "local_fulltext_sha256": "13df62c133c6ff40814cfd4047c8fa63e73af6ef14f50cb2baaeb23f8492b353",
+    "report_number": 12
+  },
+  {
+    "number": 13,
+    "id": "2608.06503",
+    "title": "Towards Reliable Context Compression for Long-Horizon Agents: An Empirical Study of Execution Instability",
+    "authors_read_version": [
+      "Min, Guanghui",
+      "Wu, Liang",
+      "Darbari, Mayank",
+      "Chen, Chen",
+      "Hong, Liangjie"
+    ],
+    "first_posted": "2026-08-06",
+    "version": "2608.06503v2",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§3—5与基线附录；决策边界干预",
+    "url": "https://arxiv.org/abs/2608.06503v2",
+    "fulltext_url": "https://arxiv.org/html/2608.06503",
+    "sha256": "edda8896fbaf7c644f7caec9c872736d10a6f393df8828ee94fbd96aa8e3cde2",
+    "live_title": "Towards Reliable Context Compression for Long-Horizon Agents: An Empirical Study of Execution Instability",
+    "live_authors": [
+      "Min, Guanghui",
+      "Wu, Liang",
+      "Darbari, Mayank",
+      "Chen, Chen",
+      "Hong, Liangjie"
+    ],
+    "live_date": [
+      "2026/08/06"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "202e598370e7d478a5f57272cce28929cb343abd9ea99299b2d147ad24a386e7",
+    "local_fulltext": "sources\\2608.06503_body.md",
+    "local_fulltext_sha256": "844ae03a50b7cfa1b916a30c409faa330a0605c6631dd66fd190e77d6380373b",
+    "report_number": 13
+  },
+  {
+    "number": 16,
+    "id": "2508.21433",
+    "title": "The Complexity Trap: Simple Observation Masking Is as Efficient as LLM Summarization for Agent Context Management",
+    "authors_read_version": [
+      "Lindenbauer, Tobias",
+      "Slinko, Igor",
+      "Felder, Ludwig",
+      "Bogomolov, Egor",
+      "Zharov, Yaroslav"
+    ],
+    "first_posted": "2025-08-29",
+    "version": "2508.21433v3",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§3—6与统计附录；跨scaffold限制",
+    "url": "https://arxiv.org/abs/2508.21433v3",
+    "fulltext_url": "https://arxiv.org/html/2508.21433",
+    "sha256": "74c763b760b90638eb5fb2ce0fa7193fbef8d6bbf95448a2b202496bb728b330",
+    "live_title": "The Complexity Trap: Simple Observation Masking Is as Efficient as LLM Summarization for Agent Context Management",
+    "live_authors": [
+      "Lindenbauer, Tobias",
+      "Slinko, Igor",
+      "Felder, Ludwig",
+      "Bogomolov, Egor",
+      "Zharov, Yaroslav"
+    ],
+    "live_date": [
+      "2025/08/29"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "94157671633f438868b6dcb33341f3e28d5e90d3306747ce630a7a6829666182",
+    "local_fulltext": "sources\\2508.21433_body.md",
+    "local_fulltext_sha256": "25b41f5f6686f3bea89cbad3d8e63e0d37dc2d01fba06c5a17bbd756e06f27ad",
+    "report_number": 14
+  },
+  {
+    "number": 21,
+    "id": "2409.07429",
+    "title": "Agent Workflow Memory",
+    "authors_read_version": [
+      "Wang, Zora Zhiruo",
+      "Mao, Jiayuan",
+      "Fried, Daniel",
+      "Neubig, Graham"
+    ],
+    "first_posted": "2024-09-11",
+    "version": "2409.07429v1",
+    "status": "已核实正式发表；正文分析对应所读版本",
+    "reading_scope": "工作流形成及§3；ICML正式记录",
+    "url": "https://arxiv.org/abs/2409.07429v1",
+    "fulltext_url": "https://arxiv.org/html/2409.07429",
+    "sha256": "b7c98652e5d6e1f1588f7b04d1d980fb7bce41d29496ab62f7250825a6396a84",
+    "live_title": "Agent Workflow Memory",
+    "live_authors": [
+      "Wang, Zora Zhiruo",
+      "Mao, Jiayuan",
+      "Fried, Daniel",
+      "Neubig, Graham"
+    ],
+    "live_date": [
+      "2024/09/11"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "9b6d30610d256db0eed2e9d387f42c5919905b082ab0069bc2583bc076418fe3",
+    "local_fulltext": "sources\\2409.07429_body.md",
+    "local_fulltext_sha256": "6c75d169d8da846760170cbd3a47565db65ce45ec9af402b6ee2325a04cd028c",
+    "report_number": 15
+  },
+  {
+    "number": 22,
+    "id": "2503.13657",
+    "title": "Why Do Multi-Agent LLM Systems Fail?",
+    "authors_read_version": [
+      "Cemri, Mert",
+      "Pan, Melissa Z.",
+      "Yang, Shuyi",
+      "Agrawal, Lakshya A.",
+      "Chopra, Bhavya",
+      "Tiwari, Rishabh",
+      "Keutzer, Kurt",
+      "Parameswaran, Aditya",
+      "Klein, Dan",
+      "Ramchandran, Kannan",
+      "Zaharia, Matei",
+      "Gonzalez, Joseph E.",
+      "Stoica, Ion"
+    ],
+    "first_posted": "2025-03-17",
+    "version": "2503.13657v3",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "设计原则、§5.3与失败分类附录",
+    "url": "https://arxiv.org/abs/2503.13657v3",
+    "fulltext_url": "https://arxiv.org/html/2503.13657",
+    "sha256": "ace1d2ed4facba29148639274ec57d8c1ff698ac272ae50ba227a3d8692976f1",
+    "live_title": "Why Do Multi-Agent LLM Systems Fail?",
+    "live_authors": [
+      "Cemri, Mert",
+      "Pan, Melissa Z.",
+      "Yang, Shuyi",
+      "Agrawal, Lakshya A.",
+      "Chopra, Bhavya",
+      "Tiwari, Rishabh",
+      "Keutzer, Kurt",
+      "Parameswaran, Aditya",
+      "Klein, Dan",
+      "Ramchandran, Kannan",
+      "Zaharia, Matei",
+      "Gonzalez, Joseph E.",
+      "Stoica, Ion"
+    ],
+    "live_date": [
+      "2025/03/17"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "3fbd5467f47749e651d00a29fc31e1bc315bc1de2633a6cfef184d6b8c249bb1",
+    "local_fulltext": "sources\\2503.13657_body.md",
+    "local_fulltext_sha256": "035514487623708daa031c193f6aa398cdc7458ad36fdc2da171c634d39c13d4",
+    "report_number": 16
+  },
+  {
+    "number": 23,
+    "id": "2606.05806",
+    "title": "When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents",
+    "authors_read_version": [
+      "Zhu, Dongsheng",
+      "Ma, Xuchen",
+      "Shen, Yucheng",
+      "Li, Xiang",
+      "Zhao, Yukun",
+      "Wang, Shuaiqiang",
+      "Yan, Lingyong",
+      "Yin, Dawei"
+    ],
+    "first_posted": "2026-06-04",
+    "version": "2606.05806v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§3及limitations；拓扑和恢复定义",
+    "url": "https://arxiv.org/abs/2606.05806v1",
+    "fulltext_url": "https://arxiv.org/html/2606.05806",
+    "sha256": "8423f9471146138cdb3bcea3366fd68e89295345830d86f748894575c91c29dc",
+    "live_title": "When Tools Fail: Benchmarking Dynamic Replanning and Anomaly Recovery in LLM Agents",
+    "live_authors": [
+      "Zhu, Dongsheng",
+      "Ma, Xuchen",
+      "Shen, Yucheng",
+      "Li, Xiang",
+      "Zhao, Yukun",
+      "Wang, Shuaiqiang",
+      "Yan, Lingyong",
+      "Yin, Dawei"
+    ],
+    "live_date": [
+      "2026/06/04"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "22f554adbd7b9b7bb66746b1d07aa7cb49a8f0154698434c5273990a4f64cfe0",
+    "local_fulltext": "sources\\2606.05806_body.md",
+    "local_fulltext_sha256": "d1d44fb29909c808216b2ec6e6294ba54bd262ae480f560506c0f9b5fbe522da",
+    "report_number": 17
+  },
+  {
+    "number": 24,
+    "id": "2503.04479",
+    "title": "ToolFuzz -- Automated Agent Tool Testing",
+    "authors_read_version": [
+      "Milev, Ivan",
+      "Balunović, Mislav",
+      "Baader, Maximilian",
+      "Vechev, Martin"
+    ],
+    "first_posted": "2025-03-06",
+    "version": "2503.04479v3",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "§4—5；输入输出一致性方法",
+    "url": "https://arxiv.org/abs/2503.04479v3",
+    "fulltext_url": "https://arxiv.org/html/2503.04479",
+    "sha256": "c425cc539e4824578b052983390fbbb80914ae819f26cd9532f8730853de4f5a",
+    "live_title": "ToolFuzz -- Automated Agent Tool Testing",
+    "live_authors": [
+      "Milev, Ivan",
+      "Balunović, Mislav",
+      "Baader, Maximilian",
+      "Vechev, Martin"
+    ],
+    "live_date": [
+      "2025/03/06"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "d1df7af602689383a37ce11c01a10b65edc8733224d4cfbc6126fd337d480ba6",
+    "local_fulltext": "sources\\2503.04479_body.md",
+    "local_fulltext_sha256": "237916e80c1fdfd871a248595c5c4c50b06371ab7f39cb807b838eaf256c17da",
+    "report_number": 18
+  },
+  {
+    "number": 25,
+    "id": "2408.04682",
+    "title": "ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities",
+    "authors_read_version": [
+      "Lu, Jiarui",
+      "Holleis, Thomas",
+      "Zhang, Yizhe",
+      "Aumayer, Bernhard",
+      "Nan, Feng",
+      "Bai, Felix",
+      "Ma, Shuang",
+      "Ma, Shen",
+      "Li, Mengyu",
+      "Yin, Guoli",
+      "Wang, Zirui",
+      "Pang, Ruoming"
+    ],
+    "first_posted": "2024-08-08",
+    "version": "2408.04682v2",
+    "status": "已核实正式发表；正文分析对应所读版本",
+    "reading_scope": "§2、评价与limitations；正式DOI",
+    "url": "https://arxiv.org/abs/2408.04682v2",
+    "fulltext_url": "https://arxiv.org/html/2408.04682",
+    "sha256": "c10f8bbbd9112d59d0adccde4c2d546703431e1c4d2d7c2c7d361def8f9a0e11",
+    "live_title": "ToolSandbox: A Stateful, Conversational, Interactive Evaluation Benchmark for LLM Tool Use Capabilities",
+    "live_authors": [
+      "Lu, Jiarui",
+      "Holleis, Thomas",
+      "Zhang, Yizhe",
+      "Aumayer, Bernhard",
+      "Nan, Feng",
+      "Bai, Felix",
+      "Ma, Shuang",
+      "Ma, Shen",
+      "Li, Mengyu",
+      "Yin, Guoli",
+      "Wang, Zirui",
+      "Pang, Ruoming"
+    ],
+    "live_date": [
+      "2024/08/08"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "96f22fe1e59848083dd3bf5f7f206e7bdeaa62c0b7d3fadb14283db6e1cb3fb6",
+    "local_fulltext": "sources\\2408.04682_body.md",
+    "local_fulltext_sha256": "b3b6139717cb25f6e43f1899b622a8cb7ce1368cf9d3ede279e926d9868e25b8",
+    "report_number": 19
+  },
+  {
+    "number": 26,
+    "id": "2406.12045",
+    "title": "τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+    "authors_read_version": [
+      "Yao, Shunyu",
+      "Shinn, Noah",
+      "Razavi, Pedram",
+      "Narasimhan, Karthik"
+    ],
+    "first_posted": "2024-06-17",
+    "version": "2406.12045v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "任务构造、§5.1与Discussion",
+    "url": "https://arxiv.org/abs/2406.12045v1",
+    "fulltext_url": "https://arxiv.org/html/2406.12045",
+    "sha256": "638e8be6a61ca85490bcfcb5831e3df79234608062c36caaafd2af5105a6c3ca",
+    "live_title": "$\\tau$-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains",
+    "live_authors": [
+      "Yao, Shunyu",
+      "Shinn, Noah",
+      "Razavi, Pedram",
+      "Narasimhan, Karthik"
+    ],
+    "live_date": [
+      "2024/06/17"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "5f660c09571dd5e3ae0f005031304b2433e99001adb4788e763789d8bfe54de0",
+    "local_fulltext": "sources\\2406.12045_body.md",
+    "local_fulltext_sha256": "e49385510f3f4b3aec8d54e8494381cf0788fc75f8eb1a41ee65102e84dc572b",
+    "report_number": 20
+  },
+  {
+    "number": 27,
+    "id": "2506.07982",
+    "title": "τ²-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+    "authors_read_version": [
+      "Barres, Victor",
+      "Dong, Honghua",
+      "Ray, Soham",
+      "Si, Xujie",
+      "Narasimhan, Karthik"
+    ],
+    "first_posted": "2025-06-09",
+    "version": "2506.07982v1",
+    "status": "预印本所读版本；未另核实正式出版",
+    "reading_scope": "环境设计与§3.3评价；双控制",
+    "url": "https://arxiv.org/abs/2506.07982v1",
+    "fulltext_url": "https://arxiv.org/html/2506.07982",
+    "sha256": "53a884b733a4317d2bddf245b83b8b09716ce92867c41de619652409f35ba106",
+    "live_title": "$\\tau^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment",
+    "live_authors": [
+      "Barres, Victor",
+      "Dong, Honghua",
+      "Ray, Soham",
+      "Si, Xujie",
+      "Narasimhan, Karthik"
+    ],
+    "live_date": [
+      "2025/06/09"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "ad57f828402edcb32f1d587353f9c0f3726b1192ca035559b4fa63a802d7773d",
+    "local_fulltext": "sources\\2506.07982_body.md",
+    "local_fulltext_sha256": "859507cfe3050e77ec66fc489cdaa09814c4488e912693f5748f6543fc7e8f15",
+    "report_number": 21
+  },
+  {
+    "number": 28,
+    "id": "2303.11366",
+    "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "authors_read_version": [
+      "Shinn, Noah",
+      "Cassano, Federico",
+      "Berman, Edward",
+      "Gopinath, Ashwin",
+      "Narasimhan, Karthik",
+      "Yao, Shunyu"
+    ],
+    "first_posted": "2023-03-20",
+    "version": "2303.11366v4",
+    "status": "所读arXiv v4；另有NeurIPS 2023正式记录",
+    "reading_scope": "方法、§5及WebShop限制；所读v4",
+    "url": "https://arxiv.org/abs/2303.11366v4",
+    "fulltext_url": "https://arxiv.org/html/2303.11366",
+    "sha256": "c96741a6170d6a8a1ec17f3780d561f813078190404f47792178080c4118f002",
+    "live_title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+    "live_authors": [
+      "Shinn, Noah",
+      "Cassano, Federico",
+      "Berman, Edward",
+      "Gopinath, Ashwin",
+      "Narasimhan, Karthik",
+      "Yao, Shunyu"
+    ],
+    "live_date": [
+      "2023/03/20"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "609f2ca0b25693341c391aa7512b7a22ca5f0a4ac8e525fe01f60b641f30f150",
+    "local_fulltext": "sources\\2303.11366_body.md",
+    "local_fulltext_sha256": "2f08d02c7a1c23535ca6b82a45fb7da711622038b564253ea6c3a4fc68732aa2",
+    "report_number": 22
+  },
+  {
+    "number": 99,
+    "id": "2611.02978",
+    "version": "2611.02978v1",
+    "url": "https://arxiv.org/abs/2611.02978v1",
+    "reading_scope": "全文HTML §3—8；状态分数、重复写规则和局限",
+    "title": "CAREFUL-Bench: Effect-Aware, Judge-Free Evaluation of Multi-Turn LLM Function Calling",
+    "status": "arXiv预印本v1，非正式发表状态证明",
+    "live_title": "CAREFUL-Bench: Effect-Aware, Judge-Free Evaluation of Multi-Turn LLM Function Calling",
+    "live_authors": [
+      "Kovalenko, Alexander",
+      "Redchych, Artem"
+    ],
+    "live_date": [
+      "2026/11/02"
+    ],
+    "verification": "live_abs_verified",
+    "abs_sha256": "25f873a0065e6d2f6795bdf503bb2d0042588d711dc20f39c62b10137e03cb62",
+    "report_number": 23
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "profile": "expired_terminal",
+  "variant": 2,
+  "rep": 0,
+  "approved": [
+    {
+      "effect_id": "op-a52d9e3-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-a52d9e3-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "original": {
+    "effect_ids": [
+      "op-a52d9e3-x",
+      "op-a52d9e3-y"
+    ],
+    "request_key": "req-a52d9e3"
+  },
+  "request_age_minutes": 90,
+  "effects": [
+    {
+      "effect_id": "op-a52d9e3-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-a52d9e3-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "terminal": true,
+  "late_pending": false,
+  "request_cache": {
+    "recover-req-a52d9e3-y-01": {
+      "ids": [
+        "op-a52d9e3-y"
+      ],
+      "response": {
+        "receipts": [
+          {
+            "effect_id": "op-a52d9e3-y",
+            "committed": true
+          }
+        ]
+      }
+    }
+  },
+  "events": [
+    {
+      "tool": "get_context",
+      "arguments": {},
+      "result": {
+        "approved": [
+          {
+            "effect_id": "op-a52d9e3-x",
+            "to": "a@example.invalid",
+            "subject": "Room",
+            "body": "Room 301"
+          },
+          {
+            "effect_id": "op-a52d9e3-y",
+            "to": "b@example.invalid",
+            "subject": "Time",
+            "body": "Time 14:00"
+          }
+        ],
+        "previous_request": {
+          "effect_ids": [
+            "op-a52d9e3-x",
+            "op-a52d9e3-y"
+          ],
+          "request_key": "req-a52d9e3"
+        },
+        "previous_response": {
+          "error": "TIMEOUT",
+          "receipts": null
+        },
+        "request_age_minutes": 90,
+        "service_documentation": "New requests succeed immediately. Notification payloads come from the immutable approved list. There is no cancellation or other lookup tool in this task.\ninspect_status reads a final authoritative execution ledger: the original worker is permanently prevented from further writes. An item reported NOT_FOUND there has not executed and cannot later execute under the old request.\nKeys were removed at request age 60 minutes. Requests using a removed key are new requests.\nReusing a retained key returns the saved first response only; it performs no additional work. That response can contain a receipt for only part of the original list.\nRequest keys bind the ordered item list. While retained, the same key with changed parameters is rejected. A previously unused key is an independent request; effect IDs are references, not deduplication tokens."
+      },
+      "is_error": false
+    },
+    {
+      "tool": "inspect_status",
+      "arguments": {},
+      "result": {
+        "items": [
+          {
+            "effect_id": "op-a52d9e3-x",
+            "status": "COMMITTED"
+          },
+          {
+            "effect_id": "op-a52d9e3-y",
+            "status": "NOT_FOUND"
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "send",
+      "arguments": {
+        "effect_ids": [
+          "op-a52d9e3-y"
+        ],
+        "request_key": "recover-req-a52d9e3-y-01"
+      },
+      "result": {
+        "receipts": [
+          {
+            "effect_id": "op-a52d9e3-y",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "reason": "Authoritative ledger showed op-a52d9e3-x COMMITTED and op-a52d9e3-y NOT_FOUND with the original worker permanently unable to write. Recovered only op-a52d9e3-y once under new request key recover-req-a52d9e3-y-01; receipt confirmed committed=true. Both approved effects are therefore completed exactly once."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "reason": "Authoritative ledger showed op-a52d9e3-x COMMITTED and op-a52d9e3-y NOT_FOUND with the original worker permanently unable to write. Recovered only op-a52d9e3-y once under new request key recover-req-a52d9e3-y-01; receipt confirmed committed=true. Both approved effects are therefore completed exactly once."
+      },
+      "is_error": false
+    }
+  ],
+  "finish": {
+    "status": "completed",
+    "reason": "Authoritative ledger showed op-a52d9e3-x COMMITTED and op-a52d9e3-y NOT_FOUND with the original worker permanently unable to write. Recovered only op-a52d9e3-y once under new request key recover-req-a52d9e3-y-01; receipt confirmed committed=true. Both approved effects are therefore completed exactly once."
+  }
+}

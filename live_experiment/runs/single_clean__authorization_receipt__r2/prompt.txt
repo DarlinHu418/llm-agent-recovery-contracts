@@ -1,0 +1,1 @@
+Complete every approved notification occurrence in this task. Retrieve the authorizations from the notification service. Use the provided tools to perform and verify the work, recover from errors as you judge appropriate, then record finish. Identical notification content can correspond to distinct required occurrences; do not change the recipient or content.

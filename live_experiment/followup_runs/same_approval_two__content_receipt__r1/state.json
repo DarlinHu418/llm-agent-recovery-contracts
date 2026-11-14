@@ -1,0 +1,207 @@
+{
+  "case": "same_approval_two",
+  "mechanism": "content_receipt",
+  "rep": 1,
+  "approved": [
+    {
+      "effect_id": "op-e969bc2a-1",
+      "authorization_id": "approval-e969bc2a-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    },
+    {
+      "effect_id": "op-e969bc2a-2",
+      "authorization_id": "approval-e969bc2a-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    }
+  ],
+  "fault_armed": false,
+  "effects": [
+    {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-e969bc2a-1",
+      "authorization_id": "approval-e969bc2a-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  ],
+  "receipts": {
+    "[\"alex@example.invalid\", \"Meeting cancelled\", \"The meeting is cancelled.\"]": {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-e969bc2a-1",
+      "authorization_id": "approval-e969bc2a-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "time_ns": 1794314864095342800,
+      "tool": "get_authorizations",
+      "arguments": {},
+      "result": {
+        "required_operations": [
+          {
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          },
+          {
+            "effect_id": "op-e969bc2a-2",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          }
+        ],
+        "requirement": "Every listed effect_id is a distinct required occurrence. Identical contents can be required more than once."
+      },
+      "is_error": false
+    },
+    {
+      "seq": 2,
+      "time_ns": 1794314868743874100,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-e969bc2a-1",
+          "op-e969bc2a-2"
+        ]
+      },
+      "result": {
+        "error": "TIMEOUT",
+        "message": "The request timed out. No receipt was returned."
+      },
+      "is_error": true
+    },
+    {
+      "seq": 3,
+      "time_ns": 1794314873181922600,
+      "tool": "inspect_receipts",
+      "arguments": {},
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 4,
+      "time_ns": 1794314878035311200,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-e969bc2a-2"
+        ]
+      },
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true,
+            "replayed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 5,
+      "time_ns": 1794314882617759400,
+      "tool": "inspect_receipts",
+      "arguments": {},
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 6,
+      "time_ns": 1794314887847346800,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-e969bc2a-2"
+        ]
+      },
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true,
+            "replayed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 7,
+      "time_ns": 1794314895343977200,
+      "tool": "finish",
+      "arguments": {
+        "status": "partial",
+        "missing_effect_ids": [
+          "op-e969bc2a-2"
+        ],
+        "summary": "Committed and verified op-e969bc2a-1. The initial batched request timed out; receipt inspection showed only op-e969bc2a-1 committed. Two recovery sends for op-e969bc2a-2 replayed the receipt for op-e969bc2a-1, so op-e969bc2a-2 remains unverified and missing."
+      },
+      "result": {
+        "recorded": true,
+        "status": "partial",
+        "missing_effect_ids": [
+          "op-e969bc2a-2"
+        ],
+        "summary": "Committed and verified op-e969bc2a-1. The initial batched request timed out; receipt inspection showed only op-e969bc2a-1 committed. Two recovery sends for op-e969bc2a-2 replayed the receipt for op-e969bc2a-1, so op-e969bc2a-2 remains unverified and missing."
+      },
+      "is_error": false
+    }
+  ],
+  "tool_calls": 7,
+  "finish": {
+    "status": "partial",
+    "missing_effect_ids": [
+      "op-e969bc2a-2"
+    ],
+    "summary": "Committed and verified op-e969bc2a-1. The initial batched request timed out; receipt inspection showed only op-e969bc2a-1 committed. Two recovery sends for op-e969bc2a-2 replayed the receipt for op-e969bc2a-1, so op-e969bc2a-2 remains unverified and missing."
+  }
+}

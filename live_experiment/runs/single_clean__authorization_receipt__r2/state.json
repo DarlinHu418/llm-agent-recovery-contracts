@@ -1,0 +1,105 @@
+{
+  "case": "single_clean",
+  "mechanism": "authorization_receipt",
+  "rep": 2,
+  "approved": [
+    {
+      "effect_id": "op-43ffcb43-1",
+      "authorization_id": "approval-43ffcb43-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    }
+  ],
+  "fault_armed": false,
+  "effects": [
+    {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-43ffcb43-1",
+      "authorization_id": "approval-43ffcb43-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  ],
+  "receipts": {
+    "op-43ffcb43-1": {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-43ffcb43-1",
+      "authorization_id": "approval-43ffcb43-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "time_ns": 1794314570607846800,
+      "tool": "get_authorizations",
+      "arguments": {},
+      "result": {
+        "required_operations": [
+          {
+            "effect_id": "op-43ffcb43-1",
+            "authorization_id": "approval-43ffcb43-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          }
+        ],
+        "requirement": "Every listed effect_id is a distinct required occurrence. Identical contents can be required more than once."
+      },
+      "is_error": false
+    },
+    {
+      "seq": 2,
+      "time_ns": 1794314575498770600,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-43ffcb43-1"
+        ]
+      },
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-43ffcb43-1",
+            "authorization_id": "approval-43ffcb43-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 3,
+      "time_ns": 1794314580290759400,
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "missing_effect_ids": [],
+        "summary": "Completed and verified the single approved notification occurrence op-43ffcb43-1; committed receipt receipt-1 matches the approved recipient and exact content."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "missing_effect_ids": [],
+        "summary": "Completed and verified the single approved notification occurrence op-43ffcb43-1; committed receipt receipt-1 matches the approved recipient and exact content."
+      },
+      "is_error": false
+    }
+  ],
+  "tool_calls": 3,
+  "finish": {
+    "status": "completed",
+    "missing_effect_ids": [],
+    "summary": "Completed and verified the single approved notification occurrence op-43ffcb43-1; committed receipt receipt-1 matches the approved recipient and exact content."
+  }
+}

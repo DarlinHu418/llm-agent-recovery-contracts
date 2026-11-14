@@ -1,0 +1,202 @@
+{
+  "case": "partial_distinct_recipients",
+  "mechanism": "content_receipt",
+  "rep": 2,
+  "approved": [
+    {
+      "effect_id": "op-5f43a6fa-1",
+      "authorization_id": "approval-5f43a6fa-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    },
+    {
+      "effect_id": "op-5f43a6fa-2",
+      "authorization_id": "approval-5f43a6fa-2",
+      "to": "jordan@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    }
+  ],
+  "fault_armed": false,
+  "effects": [
+    {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-5f43a6fa-1",
+      "authorization_id": "approval-5f43a6fa-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    },
+    {
+      "receipt_id": "receipt-2",
+      "effect_id": "op-5f43a6fa-2",
+      "authorization_id": "approval-5f43a6fa-2",
+      "to": "jordan@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  ],
+  "receipts": {
+    "[\"alex@example.invalid\", \"Meeting cancelled\", \"The meeting is cancelled.\"]": {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-5f43a6fa-1",
+      "authorization_id": "approval-5f43a6fa-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    },
+    "[\"jordan@example.invalid\", \"Meeting cancelled\", \"The meeting is cancelled.\"]": {
+      "receipt_id": "receipt-2",
+      "effect_id": "op-5f43a6fa-2",
+      "authorization_id": "approval-5f43a6fa-2",
+      "to": "jordan@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "time_ns": 1794314599566093900,
+      "tool": "get_authorizations",
+      "arguments": {},
+      "result": {
+        "required_operations": [
+          {
+            "effect_id": "op-5f43a6fa-1",
+            "authorization_id": "approval-5f43a6fa-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          },
+          {
+            "effect_id": "op-5f43a6fa-2",
+            "authorization_id": "approval-5f43a6fa-2",
+            "to": "jordan@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          }
+        ],
+        "requirement": "Every listed effect_id is a distinct required occurrence. Identical contents can be required more than once."
+      },
+      "is_error": false
+    },
+    {
+      "seq": 2,
+      "time_ns": 1794314603880495600,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-5f43a6fa-1",
+          "op-5f43a6fa-2"
+        ]
+      },
+      "result": {
+        "error": "TIMEOUT",
+        "message": "The request timed out. No receipt was returned."
+      },
+      "is_error": true
+    },
+    {
+      "seq": 3,
+      "time_ns": 1794314607457331700,
+      "tool": "inspect_receipts",
+      "arguments": {},
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-5f43a6fa-1",
+            "authorization_id": "approval-5f43a6fa-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 4,
+      "time_ns": 1794314612500048300,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-5f43a6fa-2"
+        ]
+      },
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-2",
+            "effect_id": "op-5f43a6fa-2",
+            "authorization_id": "approval-5f43a6fa-2",
+            "to": "jordan@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 5,
+      "time_ns": 1794314616256656000,
+      "tool": "inspect_receipts",
+      "arguments": {},
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-5f43a6fa-1",
+            "authorization_id": "approval-5f43a6fa-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          },
+          {
+            "receipt_id": "receipt-2",
+            "effect_id": "op-5f43a6fa-2",
+            "authorization_id": "approval-5f43a6fa-2",
+            "to": "jordan@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 6,
+      "time_ns": 1794314620327636600,
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "missing_effect_ids": [],
+        "summary": "All 2 approved notification occurrences were committed and verified by receipts: op-5f43a6fa-1 and op-5f43a6fa-2."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "missing_effect_ids": [],
+        "summary": "All 2 approved notification occurrences were committed and verified by receipts: op-5f43a6fa-1 and op-5f43a6fa-2."
+      },
+      "is_error": false
+    }
+  ],
+  "tool_calls": 6,
+  "finish": {
+    "status": "completed",
+    "missing_effect_ids": [],
+    "summary": "All 2 approved notification occurrences were committed and verified by receipts: op-5f43a6fa-1 and op-5f43a6fa-2."
+  }
+}

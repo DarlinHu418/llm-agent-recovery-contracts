@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/gssanjana4/idempotencybench",
+  "commit": "5e97e4b27d1c068b60fc083689e590c08e39e40f",
+  "accessed": "2026-11-10",
+  "files": [
+    "world.py",
+    "tasks.py",
+    "LICENSE"
+  ],
+  "scope": "Unmodified public MIT code. Diagnostic extension below is outside original one-copy task specification; not a reproduction of original model results."
+}

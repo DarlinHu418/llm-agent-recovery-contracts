@@ -1,0 +1,13 @@
+﻿episode,profile,variant,phase,started_utc,seconds,valid,returncode,timeout,expected_action,first_action,boundary_correct,eventual_correct,safe,unsafe_attempts,send_errors,duplicates,missing,exact,evidence,finish,resolved,send_calls,tool_calls
+1,expired_snapshot,2,runs,2026-11-13T17:11:58.432978+00:00,36.23399999993853,True,0,False,hold,hold,True,True,True,0,0,0,1,False,False,unresolved,False,0,3
+2,expired_snapshot,1,runs,2026-11-13T17:11:58.432978+00:00,36.28099999995902,True,0,False,hold,hold,True,True,True,0,0,0,1,False,False,unresolved,False,0,3
+3,expired_terminal,2,runs,2026-11-13T17:12:34.698739+00:00,35.984999999869615,True,0,False,residual_request,residual_request,True,True,True,0,0,0,0,True,True,completed,True,1,4
+4,expired_terminal,0,runs,2026-11-13T17:12:34.719739+00:00,32.54700000002049,False,1,False,residual_request,residual_request,True,True,True,0,0,0,0,True,True,completed,True,1,4
+5,cached_terminal,0,runs,2026-11-13T17:13:07.259032+00:00,37.04700000002049,True,0,False,residual_request,residual_request,True,True,True,0,0,0,0,True,True,completed,True,1,4
+6,expired_snapshot,0,runs,2026-11-13T17:13:10.679086+00:00,34.15599999995902,True,0,False,hold,hold,True,True,True,0,0,0,1,False,False,unresolved,False,0,3
+7,resume,1,runs,2026-11-13T17:13:44.318348+00:00,41.59399999980815,True,0,False,original_replay,original_replay,True,True,True,0,0,0,0,True,True,completed,True,1,4
+8,cached_terminal,2,runs,2026-11-13T17:13:44.839592+00:00,38.98400000017136,True,0,False,residual_request,residual_request,True,True,True,0,0,0,0,True,True,completed,True,1,4
+9,resume,2,runs,2026-11-13T17:14:23.823318+00:00,39.0,True,0,False,original_replay,original_replay,True,True,True,0,0,0,0,True,True,completed,True,1,4
+10,expired_terminal,1,runs,2026-11-13T17:14:25.916829+00:00,37.360000000102445,True,0,False,residual_request,residual_request,True,True,True,0,0,0,0,True,True,completed,True,1,4
+11,resume,0,runs,2026-11-13T17:15:02.834036+00:00,37.95399999991059,True,0,False,original_replay,original_replay,True,True,True,0,0,0,0,True,True,completed,True,1,4
+12,cached_terminal,1,runs,2026-11-13T17:15:03.285738+00:00,38.75,True,0,False,residual_request,residual_request,True,True,True,0,0,0,0,True,True,completed,True,1,4

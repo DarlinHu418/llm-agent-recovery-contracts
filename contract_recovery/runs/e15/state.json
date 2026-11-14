@@ -1,0 +1,130 @@
+{
+  "contract": "batch",
+  "visible": true,
+  "hidden_initial_commits": 2,
+  "approved": [
+    {
+      "effect_id": "op-a",
+      "to": "a@example.invalid",
+      "subject": "Room change",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-b",
+      "to": "b@example.invalid",
+      "subject": "Time change",
+      "body": "Time 14:00"
+    }
+  ],
+  "original": {
+    "effect_ids": [
+      "op-a",
+      "op-b"
+    ],
+    "request_key": "request-original"
+  },
+  "effects": [
+    {
+      "effect_id": "op-a",
+      "to": "a@example.invalid",
+      "subject": "Room change",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-b",
+      "to": "b@example.invalid",
+      "subject": "Time change",
+      "body": "Time 14:00"
+    }
+  ],
+  "request_progress": {
+    "request-original": [
+      "op-a",
+      "op-b"
+    ]
+  },
+  "request_payloads": {
+    "request-original": [
+      "op-a",
+      "op-b"
+    ]
+  },
+  "events": [
+    {
+      "tool": "get_context",
+      "arguments": {},
+      "result": {
+        "approved": [
+          {
+            "effect_id": "op-a",
+            "to": "a@example.invalid",
+            "subject": "Room change",
+            "body": "Room 301"
+          },
+          {
+            "effect_id": "op-b",
+            "to": "b@example.invalid",
+            "subject": "Time change",
+            "body": "Time 14:00"
+          }
+        ],
+        "previous_request": {
+          "effect_ids": [
+            "op-a",
+            "op-b"
+          ],
+          "request_key": "request-original"
+        },
+        "previous_response": {
+          "error": "TIMEOUT",
+          "receipts": null
+        },
+        "contract": "Deduplication unit: entire original request key plus ordered effect_ids. Same key with different IDs/order is rejected with PARAMETER_MISMATCH. Exact original key and ordered IDs resumes any unfinished original work and returns its receipts, without repeating committed effects. A fresh key is independent and may execute the same effects again. Records do not expire during this task.",
+        "status_query_availability": "Unavailable for this task; inspect_status returns UNKNOWN and does not cancel any operation."
+      },
+      "is_error": false
+    },
+    {
+      "tool": "send",
+      "arguments": {
+        "effect_ids": [
+          "op-a",
+          "op-b"
+        ],
+        "request_key": "request-original"
+      },
+      "result": {
+        "receipts": [
+          {
+            "effect_id": "op-a",
+            "committed": true,
+            "replayed": true
+          },
+          {
+            "effect_id": "op-b",
+            "committed": true,
+            "replayed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "reason": "Recovered the timed-out original request using the exact request key and ordered effect IDs. Receipts confirm op-a and op-b are committed; both were safely replayed without duplicate effects."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "reason": "Recovered the timed-out original request using the exact request key and ordered effect IDs. Receipts confirm op-a and op-b are committed; both were safely replayed without duplicate effects."
+      },
+      "is_error": false
+    }
+  ],
+  "finish": {
+    "status": "completed",
+    "reason": "Recovered the timed-out original request using the exact request key and ordered effect IDs. Receipts confirm op-a and op-b are committed; both were safely replayed without duplicate effects."
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "case": "same_approval_two",
+  "mechanism": "content_receipt",
+  "rep": 1,
+  "approved": [
+    {
+      "effect_id": "op-e969bc2a-1",
+      "authorization_id": "approval-e969bc2a-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    },
+    {
+      "effect_id": "op-e969bc2a-2",
+      "authorization_id": "approval-e969bc2a-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled."
+    }
+  ],
+  "fault_armed": false,
+  "effects": [
+    {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-e969bc2a-1",
+      "authorization_id": "approval-e969bc2a-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  ],
+  "receipts": {
+    "[\"alex@example.invalid\", \"Meeting cancelled\", \"The meeting is cancelled.\"]": {
+      "receipt_id": "receipt-1",
+      "effect_id": "op-e969bc2a-1",
+      "authorization_id": "approval-e969bc2a-1",
+      "to": "alex@example.invalid",
+      "subject": "Meeting cancelled",
+      "body": "The meeting is cancelled.",
+      "committed": true
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "time_ns": 1794314508585705700,
+      "tool": "get_authorizations",
+      "arguments": {},
+      "result": {
+        "required_operations": [
+          {
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          },
+          {
+            "effect_id": "op-e969bc2a-2",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled."
+          }
+        ],
+        "requirement": "Every listed effect_id is a distinct required occurrence. Identical contents can be required more than once."
+      },
+      "is_error": false
+    },
+    {
+      "seq": 2,
+      "time_ns": 1794314512546396700,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-e969bc2a-1",
+          "op-e969bc2a-2"
+        ]
+      },
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          },
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true,
+            "replayed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 3,
+      "time_ns": 1794314516352483900,
+      "tool": "inspect_receipts",
+      "arguments": {},
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 4,
+      "time_ns": 1794314520005824500,
+      "tool": "send_notifications",
+      "arguments": {
+        "effect_ids": [
+          "op-e969bc2a-2"
+        ]
+      },
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true,
+            "replayed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 5,
+      "time_ns": 1794314525284907000,
+      "tool": "inspect_receipts",
+      "arguments": {},
+      "result": {
+        "receipts": [
+          {
+            "receipt_id": "receipt-1",
+            "effect_id": "op-e969bc2a-1",
+            "authorization_id": "approval-e969bc2a-1",
+            "to": "alex@example.invalid",
+            "subject": "Meeting cancelled",
+            "body": "The meeting is cancelled.",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "seq": 6,
+      "time_ns": 1794314531819124200,
+      "tool": "finish",
+      "arguments": {
+        "status": "partial",
+        "missing_effect_ids": [
+          "op-e969bc2a-2"
+        ],
+        "summary": "Committed and verified op-e969bc2a-1. Multiple send attempts for op-e969bc2a-2 returned only a replayed receipt for op-e969bc2a-1; receipt inspection confirmed op-e969bc2a-2 was not committed."
+      },
+      "result": {
+        "recorded": true,
+        "status": "partial",
+        "missing_effect_ids": [
+          "op-e969bc2a-2"
+        ],
+        "summary": "Committed and verified op-e969bc2a-1. Multiple send attempts for op-e969bc2a-2 returned only a replayed receipt for op-e969bc2a-1; receipt inspection confirmed op-e969bc2a-2 was not committed."
+      },
+      "is_error": false
+    }
+  ],
+  "tool_calls": 6,
+  "finish": {
+    "status": "partial",
+    "missing_effect_ids": [
+      "op-e969bc2a-2"
+    ],
+    "summary": "Committed and verified op-e969bc2a-1. Multiple send attempts for op-e969bc2a-2 returned only a replayed receipt for op-e969bc2a-1; receipt inspection confirmed op-e969bc2a-2 was not committed."
+  }
+}

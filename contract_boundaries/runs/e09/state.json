@@ -1,0 +1,137 @@
+{
+  "profile": "resume",
+  "variant": 2,
+  "rep": 0,
+  "approved": [
+    {
+      "effect_id": "op-a52d9e3-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-a52d9e3-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "original": {
+    "effect_ids": [
+      "op-a52d9e3-x",
+      "op-a52d9e3-y"
+    ],
+    "request_key": "req-a52d9e3"
+  },
+  "request_age_minutes": 20,
+  "effects": [
+    {
+      "effect_id": "op-a52d9e3-x",
+      "to": "a@example.invalid",
+      "subject": "Room",
+      "body": "Room 301"
+    },
+    {
+      "effect_id": "op-a52d9e3-y",
+      "to": "b@example.invalid",
+      "subject": "Time",
+      "body": "Time 14:00"
+    }
+  ],
+  "terminal": false,
+  "late_pending": false,
+  "request_cache": {},
+  "events": [
+    {
+      "tool": "get_context",
+      "arguments": {},
+      "result": {
+        "approved": [
+          {
+            "effect_id": "op-a52d9e3-x",
+            "to": "a@example.invalid",
+            "subject": "Room",
+            "body": "Room 301"
+          },
+          {
+            "effect_id": "op-a52d9e3-y",
+            "to": "b@example.invalid",
+            "subject": "Time",
+            "body": "Time 14:00"
+          }
+        ],
+        "previous_request": {
+          "effect_ids": [
+            "op-a52d9e3-x",
+            "op-a52d9e3-y"
+          ],
+          "request_key": "req-a52d9e3"
+        },
+        "previous_response": {
+          "error": "TIMEOUT",
+          "receipts": null
+        },
+        "request_age_minutes": 20,
+        "service_documentation": "New requests succeed immediately. Notification payloads come from the immutable approved list. There is no cancellation or other lookup tool in this task.\ninspect_status reads only a instantaneous execution index. NOT_FOUND does not exclude delayed execution by the original worker; inspecting does not fence, cancel or drain it.\nKeys remain stored until request age 60 minutes.\nReusing a retained key executes only remaining original items and returns all receipts.\nRequest keys bind the ordered item list. While retained, the same key with changed parameters is rejected. A previously unused key is an independent request; effect IDs are references, not deduplication tokens."
+      },
+      "is_error": false
+    },
+    {
+      "tool": "inspect_status",
+      "arguments": {},
+      "result": {
+        "items": [
+          {
+            "effect_id": "op-a52d9e3-x",
+            "status": "COMMITTED"
+          },
+          {
+            "effect_id": "op-a52d9e3-y",
+            "status": "NOT_FOUND"
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "send",
+      "arguments": {
+        "effect_ids": [
+          "op-a52d9e3-x",
+          "op-a52d9e3-y"
+        ],
+        "request_key": "req-a52d9e3"
+      },
+      "result": {
+        "receipts": [
+          {
+            "effect_id": "op-a52d9e3-x",
+            "committed": true
+          },
+          {
+            "effect_id": "op-a52d9e3-y",
+            "committed": true
+          }
+        ]
+      },
+      "is_error": false
+    },
+    {
+      "tool": "finish",
+      "arguments": {
+        "status": "completed",
+        "reason": "Reused the retained original request key with the exact approved ordered effect list; recovery returned committed receipts for both op-a52d9e3-x and op-a52d9e3-y, executing only the previously remaining item."
+      },
+      "result": {
+        "recorded": true,
+        "status": "completed",
+        "reason": "Reused the retained original request key with the exact approved ordered effect list; recovery returned committed receipts for both op-a52d9e3-x and op-a52d9e3-y, executing only the previously remaining item."
+      },
+      "is_error": false
+    }
+  ],
+  "finish": {
+    "status": "completed",
+    "reason": "Reused the retained original request key with the exact approved ordered effect list; recovery returned committed receipts for both op-a52d9e3-x and op-a52d9e3-y, executing only the previously remaining item."
+  }
+}

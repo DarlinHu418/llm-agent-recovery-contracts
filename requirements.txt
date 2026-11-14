@@ -1,0 +1,2 @@
+# Offline experiment verification uses Python >=3.10 standard library only.
+# Optional figure and document tools: pip install -r requirements-authoring.txt
