@@ -1,47 +1,98 @@
 [
   {
-    "name": "01_question_evolution",
-    "kind": "schematic",
-    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+    "number": 1,
+    "file": "1.png",
+    "path": "figures/1.png",
+    "title_in_report": "非幂等操作超时后的隐藏提交状态",
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1155269,
+    "sha256": "275f1625f957d0226cc0d1121ebeeb6a74907569977cf04adfaf8f005abdf3bf",
+    "source": "Author-supplied Desktop Fig folder; copied without edits"
   },
   {
-    "name": "02_three_stage_design",
-    "kind": "schematic",
-    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+    "number": 2,
+    "file": "2.png",
+    "path": "figures/2.png",
+    "title_in_report": "研究问题演进路线",
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1047166,
+    "sha256": "81899e3d3851443e4c3688c34adfe68c49bb1b80b546091a52d4bf7d1df8adc5",
+    "source": "Author-supplied Desktop Fig folder; copied without edits"
   },
   {
-    "name": "03_hidden_commit_states",
-    "kind": "schematic",
-    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+    "number": 3,
+    "file": "3.png",
+    "path": "figures/3.png",
+    "title_in_report": "三阶段实验设计结构",
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1190414,
+    "sha256": "6569da6c01a32c82d93752b467601bd73377f8c03ca231bfc85a56e92d7100f7",
+    "source": "Author-supplied Desktop Fig folder; copied without edits"
   },
   {
-    "name": "04_safe_action_tree",
-    "kind": "schematic",
-    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+    "number": 4,
+    "file": "4.png",
+    "path": "figures/4.png",
+    "title_in_report": "四种契约条件下的安全恢复动作树",
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1225286,
+    "sha256": "78a8c2843f09bca670b59dae642346a62af00ec768bb4cff4a8af356e99bbffb",
+    "source": "Author-supplied Desktop Fig folder; copied without edits"
   },
   {
-    "name": "05_evaluation_reversal",
-    "kind": "data",
-    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+    "number": 5,
+    "file": "5.png",
+    "path": "figures/5.png",
+    "title_in_report": "32会话评价反转对照",
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1104031,
+    "sha256": "7e3025875138bf2e9d942974ece57052bdcac8ce281e0a382c4c33de35fd1a40",
+    "source": "Author-supplied Desktop Fig folder; copied without edits"
   },
   {
-    "name": "06_contract_visibility",
-    "kind": "data",
-    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+    "number": 6,
+    "file": "6.png",
+    "path": "figures/6.png",
+    "title_in_report": "18会话的条件选择与完成结果",
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1122129,
+    "sha256": "c4ed6221ca66f281cc178079c8e64adf68428d425e1bef3f6b8d34838c2c1de1",
+    "source": "Author-supplied Desktop Fig folder; copied without edits"
   },
   {
-    "name": "07_action_divergence",
-    "kind": "data",
-    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+    "number": 7,
+    "file": "7.png",
+    "path": "figures/7.png",
+    "title_in_report": "12个有效会话的首个恢复提交动作分布",
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1107856,
+    "sha256": "91fa40672967d97797026305b33fd44d0f68019b4d7da93a71a2ebba89c2f416",
+    "source": "Author-supplied Desktop Fig folder; copied without edits"
   },
   {
-    "name": "08_agent_rule_comparison",
-    "kind": "data",
-    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
-  },
-  {
-    "name": "09_decision_execution_boundary",
-    "kind": "schematic",
-    "text_policy": "Only legend text; titles, node labels, ticks and captions appear outside images."
+    "number": 8,
+    "file": "8.png",
+    "path": "figures/8.png",
+    "title_in_report": "Agent与确定性规则比较",
+    "format": "PNG",
+    "width": 1672,
+    "height": 941,
+    "bytes": 1182478,
+    "sha256": "e2642bbb669d4f760b3bf65d0b833c6f760984e18f64682fa61bc09c077beac3",
+    "source": "Author-supplied Desktop Fig folder; copied without edits"
   }
 ]

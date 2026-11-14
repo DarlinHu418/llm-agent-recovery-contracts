@@ -23,6 +23,6 @@ def main():
  result={'verified_at_utc':datetime.now(timezone.utc).isoformat(),'python':sys.version,'offline_only':True,'all_passed':all_ok,'checks':log}
  out=ROOT/'verification'/'latest.json';out.parent.mkdir(exist_ok=True);out.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
  assert all_ok,'Offline checks failed; see verification/latest.json'
- p=ROOT/'report'/'provenance.json';info=json.loads(p.read_text(encoding='utf-8'));assert sha(ROOT/'report'/'final_report.docx')==info['final_report_sha256']
+ p=ROOT/'report'/'provenance.json';info=json.loads(p.read_text(encoding='utf-8'));assert sha(ROOT/info.get('final_report_path','report/final_report.pdf'))==info['final_report_sha256']
  print('All seven checks passed; author final report hash verified.')
 if __name__=='__main__':main()

@@ -2,17 +2,17 @@
 
 《海洋数据挖掘技术》课程研究的代码、真实模型实验记录、原创图表、AI协作对话和最终报告。研究链条为：先校准恢复方案的评价单位，再检验工具契约可见性下的恢复选择，最后用正确动作不同的匹配任务辨别简单重试规则与条件决策。
 
-**[最终课程报告 Word](report/final_report.docx)** · [报告文本](report/final_report.md) · [完整可见AI协作对话](chat/完整AI协作聊天记录.md) · [复现说明](REPRODUCIBILITY.md)
+**[最终课程报告 PDF](report/final_report.pdf)** · [报告文本](report/final_report.md) · [完整可见AI协作对话](chat/完整AI协作聊天记录.md) · [复现说明](REPRODUCIBILITY.md)
 
 ## 五类交付材料
 
 | 材料 | 位置与内容 |
 |---|---|
 | 完整实验代码 | `live_experiment/`、`contract_recovery/`、`contract_boundaries/`；含工具服务、运行器、提示、评分、冻结协议及离线分析 |
-| 原始结果及图表 | 各阶段的 `runs/`、第一阶段 `followup_runs/`、第三阶段 `replacement_runs/`；`figures/`提供9幅原创SVG/PDF/PNG |
+| 原始结果及图表 | 各阶段的 `runs/`、第一阶段 `followup_runs/`、第三阶段 `replacement_runs/`；`figures/`提供作者指定Fig目录中的8张PNG原图 |
 | 环境和复现 | 本文件、`REPRODUCIBILITY.md`、`environment/`、`requirements*.txt`、`scripts/verify.py`与`scripts/prepare_online.py` |
 | 完整AI协作聊天记录 | `chat/完整AI协作聊天记录.md`，从本聊天首次研究请求至导出截点逐条保存用户与助手可见发言；索引及范围见`chat/export_metadata.json` |
-| 最终课程报告 | `report/final_report.docx`是作者本次指定的桌面最新版，字节级原样复制；Markdown为该Word的文字和表格提取 |
+| 最终课程报告 | `report/final_report.pdf`是作者本次指定的24页PDF，字节级原样复制；Markdown为该PDF的逐页文字提取 |
 
 ## 实验与主要结果
 
@@ -42,9 +42,9 @@ python scripts/verify.py
 
 ## 图表与报告版本
 
-`figures/01_question_evolution.svg`至`09_decision_execution_boundary.svg`涵盖研究演进、三阶段结构、隐藏提交状态、契约决策树、评价反转、18会话结果、12会话动作分叉、规则比较和执行责任边界。图内仅有图例，节点、行序、标尺及分母由最终报告图注解释。
+`figures/1.png`至`8.png`为作者最新指定的Fig目录原文件，未经重绘或数值修正；文件编号、尺寸和SHA256见`report/figure_manifest.json`。本次仅提供8张独立PNG，最终PDF中图9未另提供独立文件。历史矢量图可从Git历史查看。
 
-`report/provenance.json`记录桌面最终Word的SHA256。`authoring/`是**作者修改前的报告写作与制图源文件**，可重建研究图和早期版式；作者随后修改了摘要、封面及正文，不能声称这些脚本逐字重建最终Word。最终稿以`report/`为准。23篇研究论文的固定版本、作者、时间、阅读范围及URL在`report/references_verified.json`；预印本、正式发表记录与工程资料分别说明。
+`report/provenance.json`记录最终PDF的SHA256与版本来源。`authoring/`仍保留作者修改前的报告写作与制图源文件，不能逐字重建最终PDF或这8张替换图。最终报告以`report/final_report.pdf`为准。23篇研究论文的固定版本、作者、时间、阅读范围及URL仍见`report/references_verified.json`。
 
 ## AI协作记录范围
 

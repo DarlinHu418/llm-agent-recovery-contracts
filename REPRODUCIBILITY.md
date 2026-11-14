@@ -40,11 +40,11 @@ python -m venv .venv
 .\.venv\Scripts\python.exe authoring/figures.py
 ```
 
-Linux/macOS使用`.venv/bin/python`。制图源使用Windows微软雅黑字体；其他系统需要自行安装可用中文字体并修改字体路径。相同字号与中文字体有助于保持布局，但无需据此修改冻结实验源码。重建图默认输出到`authoring/figures/`，已交付图固定存于根目录`figures/`。
+Linux/macOS使用`.venv/bin/python`。制图源使用Windows微软雅黑字体；其他系统需要自行安装可用中文字体并修改字体路径。相同字号与中文字体有助于保持历史图的布局，但无需据此修改冻结实验源码。历史制图脚本默认输出到`authoring/figures/`；根目录`figures/`现为作者提供的8张PNG，不应将历史重建图误认作当前版本。
 
 `environment/packaging_environment.json`记录本轮离线整理时的Python及文档库版本；原在线实验配置则以每阶段协议和每个会话的`command.json`为准。`requirements-authoring.txt`固定的是可选制图/文档环境，不应声称原在线模型服务由这些Python包提供。
 
-最终Word来自作者指定的桌面文件，原样保存，没有自动修改封面项目链接；GitHub入口在README提供。其文字和表格抽取见`report/final_report.md`，不替代Word中的图、公式及分页。`authoring/`保留前一版写作源码，不是最终人工修改版的逐字重建器。若试用旧版Word构建器，需要自己的版式参考件`authoring/reference_undergraduate.docx`，再生成图与运行构建器；该参考文稿不随公开仓库分发。
+最终报告采用作者指定的24页PDF，按原字节保存于`report/final_report.pdf`，SHA256见`report/provenance.json`。`report/final_report.md`为该PDF逐页文字提取，不代替其中的图表、公式与分页。仓库当前图表为作者指定Fig目录的8张PNG，未经重绘；`authoring/`仅保留历史写作和制图源码，不能逐字重建最终PDF或新PNG。旧版Word和矢量图仍可在Git历史中查看。实验代码、原始结果及聊天记录保持原发布状态。
 
 ## 独立在线复跑
 
