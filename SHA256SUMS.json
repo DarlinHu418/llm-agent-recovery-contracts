@@ -13,8 +13,8 @@
   "authoring/qa_pages.py": "f5fc6cfde8014306496bd8fa1c0440af2340ee79444d302e371684184d3bb4c6",
   "authoring/references_verified.json": "c091631ac05d4cb6f76b67ea9255402a3c45fedeaeddd641dbc0ac475657641c",
   "authoring/render.ps1": "52f69fd47c61307590a059a07886416a00824482eaed27bb249cc58e8a966f48",
-  "chat/export_metadata.json": "ceabfa1da3becd805d2a31e91c77c1abe7590be45e6ddcafebfac7e123134b77",
-  "chat/完整AI协作聊天记录.md": "1075359dde8f33b92e6d33579e3131eed57da642bb28bc64955180e54c3d1c94",
+  "chat/export_metadata.json": "76fb1061df95c1899fc21550207304774fae162351cbf7ba0815da379c7f01a3",
+  "chat/完整AI协作聊天记录.md": "025fc028b7e37a9d7b86576c7947f213b67210654bc765fd86ed509b91eece9e",
   "contract_boundaries/analysis.json": "2b3f31c21c7b4cb74a1fca788a08e07e2de260c9c3d2d3215b38c43ee7784427",
   "contract_boundaries/analyze.py": "36d5d83c40820ac3d9d89566de86a45f84439232efe43534143136a370028c32",
   "contract_boundaries/baseline_results.json": "1738d17f73ed1d5122b9412556ce76fb660fd96780d8192f10184a1fc6200c75",
@@ -552,5 +552,5 @@
   "scripts/verify.py": "9b2c47ee3c54c646488a3a4429aa9a5e5747ef508e2d500081f30972330f9ca5",
   "THIRD_PARTY_NOTICES.md": "7a96f383f5bfa0e909aeb06071e2bd2502ce33f76d141356dacb8017f9973464",
   "verification/offline_checks.json": "ecc780fdb4b21558983b517becec64a3ffc47b0f04f204789340a0a33bc559a0",
-  "verification/release_validation.json": "9f8c43c490c5b9158d49458174c9643db8e18ab3fbd84f5bd7cc8543bfb945e8"
+  "verification/release_validation.json": "ab1f25150a7b3a48e2c3aaf97fdacaddda0b20471f9cc143359bd314c58dd870"
 }
